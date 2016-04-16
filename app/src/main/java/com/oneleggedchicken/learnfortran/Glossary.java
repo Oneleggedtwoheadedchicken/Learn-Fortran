@@ -11,6 +11,7 @@ public class Glossary extends Activity {
 
     ListView listView;
     String[] values;
+    ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +23,7 @@ public class Glossary extends Activity {
          values = getResources().getStringArray(R.array.glossary);
 
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+        adapter = new ArrayAdapter<String>(this,
                 R.layout.list_text,
                 values);
 

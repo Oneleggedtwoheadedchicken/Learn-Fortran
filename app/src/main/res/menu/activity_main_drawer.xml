@@ -15,7 +15,6 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Glossary" />
         <item
-            android:enabled="false"
             android:id="@+id/invite"
             android:icon="@drawable/ic_menu_share"
             android:title="Inivite Friends" />
@@ -28,7 +27,6 @@
                 android:icon="@drawable/ic_menu_manage"
                 android:title="Settings" />
             <item
-                android:enabled="false"
                 android:id="@+id/rate"
                 android:icon="@drawable/ic_menu_send"
                 android:title="Rate" />

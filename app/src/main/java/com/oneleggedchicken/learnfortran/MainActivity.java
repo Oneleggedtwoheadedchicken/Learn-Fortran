@@ -1,6 +1,8 @@
 package com.oneleggedchicken.learnfortran;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -78,24 +80,48 @@ public class MainActivity extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.compiler) {
 
-            Intent intent = new Intent(MainActivity.this,Compiler.class);
+            Intent intent = new Intent(MainActivity.this, Compiler.class);
             startActivity(intent);
 
         } else if (id == R.id.glossary) {
 
-            Intent intent = new Intent(MainActivity.this,Glossary.class);
+            Intent intent = new Intent(MainActivity.this, Glossary.class);
             startActivity(intent);
 
         } else if (id == R.id.settings) {
 
         } else if (id == R.id.invite) {
 
+            Intent i = new Intent(Intent.ACTION_SEND);
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+            i.setType("text/plain");
+            i.putExtra(Intent.EXTRA_TEXT, "I'm learning Fortran on Learn Fortran application ! Checkout #FortranIsFun");
+            i.putExtra(Intent.EXTRA_SUBJECT, "https://play.google.com/store/apps/details?id=com.oneleggedchicken.learnfortran");
+            startActivity(Intent.createChooser(i, "Share with friends"));
+
         } else if (id == R.id.rate) {
 
-        }
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("market://details?id=com.oneleggedchicken.learnfortran"));
+            if (!MyStartActivity(intent)) {
+                intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.oneleggedchicken.learnfortran"));
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
+            }
+
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            drawer.closeDrawer(GravityCompat.START);
+
+        }
         return true;
+    }
+
+
+    private boolean MyStartActivity(Intent aIntent) {
+        try {
+            startActivity(aIntent);
+            return true;
+        } catch (ActivityNotFoundException e) {
+            return false;
+        }
     }
 }
