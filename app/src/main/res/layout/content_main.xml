@@ -25,16 +25,26 @@
             android:layout_centerHorizontal="true"
             android:layout_width="160dp"
             android:layout_height="wrap_content">
-            <Button
+
+            <RelativeLayout
 
                 android:background="@drawable/green_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/button"
+                android:id="@+id/Basics"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
-                />
+                android:drawableLeft="@drawable/coding"
+
+                >
+                <ImageView
+                    android:src="@drawable/coding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
             <TextView
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
@@ -61,15 +71,23 @@
 
             >
 
-        <Button
+        <RelativeLayout
             android:background="@drawable/green_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button2"
+            android:id="@+id/Loops"
             android:layout_gravity="center"
 
 
-            />
+            >
+            <ImageView
+                android:src="@drawable/loop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
             <TextView
 
                 android:layout_width="wrap_content"
@@ -97,14 +115,14 @@ and Loops"
             android:layout_alignParentEnd="true">
 
 
-        <Button
+        <RelativeLayout
             android:background="@drawable/green_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button3"
+            android:id="@+id/Arrays"
             android:layout_gravity="center"
 
-            />
+            ></RelativeLayout>
             <TextView
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
@@ -128,7 +146,7 @@ and Loops"
             android:layout_alignParentStart="true"
 
             android:layout_marginTop="67dp">
-        <Button
+        <RelativeLayout
             android:layout_gravity="center"
             android:background="@drawable/green_button"
             android:layout_width="wrap_content"
@@ -145,7 +163,7 @@ and Loops"
             android:layout_alignTop="@+id/btn4"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true">
-        <Button
+        <RelativeLayout
             android:background="@drawable/green_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -162,7 +180,7 @@ and Loops"
             android:layout_below="@id/btn5"
             android:layout_marginTop="67dp"
             android:layout_centerHorizontal="true">
-        <Button
+        <RelativeLayout
             android:background="@drawable/color_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
