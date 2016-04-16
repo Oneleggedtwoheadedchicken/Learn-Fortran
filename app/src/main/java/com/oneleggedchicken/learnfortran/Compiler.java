@@ -7,14 +7,15 @@ import android.webkit.WebView;
 import com.oneleggedchicken.learnfortran.R;
 
 public class Compiler extends Activity {
+    WebView webview;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.compiler_web_view);
 
         WebView webview = (WebView) findViewById(R.id.web);
         webview.getSettings().setJavaScriptEnabled(true);
-        webview.loadUrl("https://ideone.com");
+        webview.loadUrl("file:///android_asset/editor.html");
 
     }
 
