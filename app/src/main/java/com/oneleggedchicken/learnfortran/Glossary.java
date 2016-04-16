@@ -18,7 +18,7 @@ public class Glossary extends Activity {
 
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_2, android.R.id.text2,
+                R.layout.list_text,
                 values);
 
 
