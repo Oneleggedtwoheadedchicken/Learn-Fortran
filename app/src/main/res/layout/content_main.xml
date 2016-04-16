@@ -23,21 +23,24 @@
             android:id="@+id/btn1"
             android:orientation="vertical"
             android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
+            android:layout_width="160dp"
             android:layout_height="wrap_content">
             <Button
+
                 android:background="@drawable/green_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                />
             <TextView
+                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Basic Concepts"
+                android:textSize="20dp"
                 android:layout_marginTop="5dp"
                 android:id="@+id/textView2"
                 android:layout_below="@+id/button"
@@ -71,7 +74,7 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="20dp"
                 android:text="Conditionals
 and Loops"
                 android:layout_marginTop="5dp"
@@ -103,14 +106,14 @@ and Loops"
 
             />
             <TextView
+                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Array"
+                android:text="Arrays"
+                android:textSize="20dp"
                 android:layout_marginTop="5dp"
                 android:id="@+id/textView4"
                 android:layout_below="@+id/button3"
-                android:layout_gravity="center"
 
                 />
         </LinearLayout>
