@@ -12,6 +12,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
+import android.widget.FrameLayout;
+
 import java.lang.*;
 
 public class MainActivity extends AppCompatActivity
@@ -24,15 +27,15 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
-
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        // Load Compiler in The Background
+        loadCompiler();
     }
 
     @Override
@@ -121,5 +124,14 @@ public class MainActivity extends AppCompatActivity
         } catch (ActivityNotFoundException e) {
             return false;
         }
+    }
+    public void loadCompiler(){
+        Compiler.editorPage = helperFunctions.loadFile("editor.html",this);
+        Compiler.webview = new WebView(this);
+        Compiler.webview.getSettings().setJavaScriptEnabled(true);
+        Compiler.webview.getSettings().setBuiltInZoomControls(true);
+//        webview.loadUrl("file:///android_asset/editor.html");
+        Compiler.webview.loadDataWithBaseURL("file:///android_asset/", Compiler.editorPage, "text/html", "utf-8", null);
+
     }
 }
