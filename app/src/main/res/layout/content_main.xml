@@ -49,28 +49,35 @@
             android:id="@+id/btn2"
             android:orientation="vertical"
             android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn1"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="67dp">
+            android:layout_marginTop="67dp"
+
+            >
 
         <Button
-            android:layout_marginLeft="40dp"
             android:background="@drawable/green_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button2"
+            android:layout_gravity="center"
+
+
             />
             <TextView
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Conditionals and Loops"
+                android:text="Conditionals
+and Loops"
                 android:layout_marginTop="5dp"
                 android:id="@+id/textView3"
                 android:layout_below="@+id/button2"
+                android:gravity="center"
                 android:layout_gravity="center"
 
                 />
@@ -80,9 +87,8 @@
             android:id="@+id/btn3"
             android:orientation="vertical"
             android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="40dp"
             android:layout_alignTop="@+id/btn2"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true">
@@ -93,7 +99,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button3"
-             />
+            android:layout_gravity="center"
+
+            />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -110,14 +118,15 @@
             android:id="@+id/btn4"
             android:orientation="vertical"
             android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn3"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginLeft="40dp"
+
             android:layout_marginTop="67dp">
         <Button
+            android:layout_gravity="center"
             android:background="@drawable/green_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -128,9 +137,8 @@
             android:id="@+id/btn5"
             android:orientation="vertical"
             android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="40dp"
             android:layout_alignTop="@+id/btn4"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true">
@@ -139,6 +147,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button5"
+            android:layout_gravity="center"
+
             />
         </LinearLayout>
         <LinearLayout
