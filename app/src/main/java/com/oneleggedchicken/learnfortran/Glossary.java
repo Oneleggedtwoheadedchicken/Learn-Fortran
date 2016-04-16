@@ -6,15 +6,20 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+
 public class Glossary extends Activity {
+
+    ListView listView;
+    String[] values;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_view);
 
-        ListView listView = (ListView) findViewById(R.id.list);
+         listView = (ListView) findViewById(R.id.list);
 
-        String[] values = getResources().getStringArray(R.array.glossary);
+         values = getResources().getStringArray(R.array.glossary);
 
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
