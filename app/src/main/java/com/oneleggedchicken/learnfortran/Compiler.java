@@ -4,8 +4,7 @@ package com.oneleggedchicken.learnfortran;
 import android.app.Activity;
 import android.os.Bundle;
 import android.webkit.WebView;
-
-import fortran.com.fortran.R;
+import com.oneleggedchicken.learnfortran.R;
 
 public class Compiler extends Activity {
     @Override

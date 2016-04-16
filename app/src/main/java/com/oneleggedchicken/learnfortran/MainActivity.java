@@ -13,7 +13,7 @@ import android.view.MenuItem;
 
 import java.lang.*;
 
-import fortran.com.fortran.R;
+import com.oneleggedchicken.learnfortran.R;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
