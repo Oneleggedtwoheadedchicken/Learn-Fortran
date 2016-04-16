@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="glossary">
+        <item>Arithmetic IF	: Transfers control, depending on whether value of an arithmetic expression is negative, zero, or positive</item>
+        <item>ASSIGN : Assigns a statement number to a variable</item>
+        <item>Assigned GO TO :Transfers control to a statement specified by a variable; in conjunction with ASSIGN statement</item>
+        <item>Assignment : Assigns a value to a variable</item>
+        <item>BACKSPACE	: Backspace a file</item>
+        <item>BLOCK DATA : Heading of a block data subprogram used to initialize variables in named common blocks</item>
+        <item>BLOCK IF : Executes or bypasses a block of statements, depending on truth or falsity of a logical expression; must be paired with END IF and may have ELSE or ELSE IF blocks</item>
+        <item>CALL : Calls a subroutine</item>
+        <item>CHARACTER : Specifies character type</item>
+        <item>CLOSE : Closes a file</item>
+        <item>COMMON : Establishes blank or named common areas</item>
+        <item>COMPLEX : Specifies complex type</item>
+        <item>Computed GO TO : Transfers control to one of several statements, depending on the value of an integer expression</item>
+        <item>CONTINUE : Used to close a DO-loop</item>
+        <item>DATA : Initializes variables at compile time</item>
+        <item>DIMENSION : Declares dimensions of arrays</item>
+        <item>DO : First statement of a DO-loop</item>
+        <item>DOUBLE PRECISION : Specifies double precision type</item>
+        <item>ELSE : Defines ELSE-block in a block IF statement</item>
+        <item>ELSE IF : Defines ELSE-IF block within a block IF used for multialternative selection</item>
+        <item>END : Last statement of each program unit</item>
+        <item>END IF : Last statement of a block IF</item>
+        <item>ENDFILE : Places end-of-file record in a file</item>
+        <item>END WHILE, END DO	: Terminates a WHILE loop; not in standard FORTRAN 77</item>
+        <item>ENTRY	: Specifies entry point in a subprogram</item>
+        <item>EQUIVALENCE : Establishes sharing of memory locations by different variables in same program unit</item>
+        <item>EXTERNAL : Specifies externally defined subprograms that may be used as arguments</item>
+        <item>FORMAT : Defines a list of descriptors</item>
+        <item>FUNCTION : Heading for a function subprogram</item>
+        <item>GO TO	: Unconditionally transfers control to a specified statement</item>
+        <item>IMPLICIT : Used to establish a naming convention</item>
+        <item>INQUIRE : Determines properties of a file or of its connection to a unit number</item>
+        <item>INTEGER : Specifies integer type</item>
+        <item>INTRINSIC	: Specifies intrinsic functions that may be used as arguments</item>
+        <item>LOGICAL : Specifies logical type</item>
+        <item>Logical IF : Executes or bypasses a statement depending on the truth or falsity of a logical expression</item>
+        <item>OPEN : Opens a file</item>
+        <item>PARAMETER : Defines parameters</item>
+        <item>PAUSE	: Interrupts program execution, program may be restarted</item>
+        <item>PRINT	: Output statement</item>
+        <item>PROGRAM : Program heading</item>
+        <item>READ : Input statement</item>
+        <item>REAL : Specifies real type</item>
+        <item>RETURN : Returns control from subprogram to calling program unit</item>
+        <item>REWIND : Positions file at initial point</item>
+        <item>SAVE : Saves values of local variables in a subprogram for later references</item>
+        <item>Statement function : Function defined within a program unit by a single statement</item>
+        <item>STOP : Terminates execution</item>
+        <item>SUBROUTINE : Heading for subroutine subprogram</item>
+        <item>WRITE	: Output statement</item>
+    </string-array>
+</resources>

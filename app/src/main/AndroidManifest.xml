@@ -22,6 +22,7 @@
         </activity>
 
         <activity android:name=".Compiler"/>
+        <activity android:name=".Glossary"/>
     </application>
 
 </manifest>
