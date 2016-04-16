@@ -8,19 +8,20 @@
             android:title="Home" />
         <item
             android:id="@+id/compiler"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/coding"
             android:title="Code Playground" />
         <item
             android:id="@+id/glossary"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/glossary"
             android:title="Glossary" />
         <item
             android:id="@+id/invite"
-            android:icon="@drawable/ic_menu_share"
+            android:icon="@drawable/invite"
             android:title="Inivite Friends" />
     </group>
 
-    <item android:title="">
+<group>
+
         <menu>
             <item
                 android:id="@+id/settings"
@@ -28,9 +29,9 @@
                 android:title="Settings" />
             <item
                 android:id="@+id/rate"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/star"
                 android:title="Rate" />
         </menu>
-    </item>
+</group>
 
 </menu>
