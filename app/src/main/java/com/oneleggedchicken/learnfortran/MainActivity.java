@@ -17,6 +17,8 @@ import java.lang.*;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    String inviteText = "I'm learning Fortran on Learn Fortran application ! Checkout #FortranIsFun";
+    String inviteTitle = "Share with friends";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,9 +95,9 @@ public class MainActivity extends AppCompatActivity
             Intent i = new Intent(Intent.ACTION_SEND);
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
             i.setType("text/plain");
-            i.putExtra(Intent.EXTRA_TEXT, "I'm learning Fortran on Learn Fortran application ! Checkout #FortranIsFun");
+            i.putExtra(Intent.EXTRA_TEXT, inviteText);
             i.putExtra(Intent.EXTRA_SUBJECT, "https://play.google.com/store/apps/details?id=com.oneleggedchicken.learnfortran");
-            startActivity(Intent.createChooser(i, "Share with friends"));
+            startActivity(Intent.createChooser(i, inviteTitle));
 
         } else if (id == R.id.rate) {
 
