@@ -41,7 +41,7 @@
                 >
                 <ImageView
                     android:src="@drawable/coding"
-                    android:layout_width="wrap_content"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"/>
@@ -159,8 +159,27 @@ and Loops"
             android:background="@drawable/green_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button4"
-            />
+            android:id="@+id/modules"
+            >
+            <ImageView
+                android:src="@drawable/modules"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Modules"
+                android:textSize="20dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/textView5"
+                android:layout_below="@+id/button3"
+
+                />
         </LinearLayout>
         <LinearLayout
             android:id="@+id/btn5"
@@ -176,9 +195,25 @@ and Loops"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button5"
-            android:layout_gravity="center"
+            android:layout_gravity="center">
+            <ImageView
+                android:src="@drawable/format"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Format"
+                android:textSize="20dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/textView7"
+                android:layout_below="@+id/button5"
 
-            />
+                />
         </LinearLayout>
         <LinearLayout
             android:id="@+id/btn6"
@@ -193,12 +228,27 @@ and Loops"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button6"
-             />
+             >
+            <ImageView
+                android:src="@drawable/test"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
 
+        </RelativeLayout>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test"
+                android:textSize="20dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/textView6"
+                android:layout_below="@+id/button6"
+
+                />
         </LinearLayout>
-
-
-
 
 
 
