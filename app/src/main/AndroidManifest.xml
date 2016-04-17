@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Compiler"/>
+        <activity android:name=".Compiler" android:windowSoftInputMode="stateVisible"/>
         <activity android:name=".Glossary"/>
         <activity android:name=".TableGrid"/>
 
