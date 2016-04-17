@@ -10,6 +10,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,7 +19,11 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
+import org.xmlpull.v1.XmlPullParserException;
+
+import java.io.IOException;
 import java.lang.*;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -27,13 +32,24 @@ public class MainActivity extends AppCompatActivity
     String inviteTitle = "Share with friends";
     RelativeLayout arrays,basics,loops;
     String [] basicsfirstArray,basicssecArray;
-
+    loadXML x;
+    ArrayList<Data> al;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        basicsfirstArray = getResources().getStringArray(R.array.basicsfirst);
-        basicssecArray = getResources().getStringArray(R.array.basicssecond);
+
+        al = new ArrayList<>();
+        try {
+            x = new loadXML(getApplicationContext(),"questions.xml");
+            Log.d("data", x.dataArray.toString());
+            al=x.dataArray;
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (XmlPullParserException e) {
+            e.printStackTrace();
+        }
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -53,10 +69,20 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this,TableGrid.class);
-                intent.putExtra("array",basicsfirstArray);
-                intent.putExtra("secarray",basicssecArray);
+                Intent intent = new Intent(MainActivity.this, TableGrid.class);
+                intent.putExtra("data", al.get(0));
+                startActivity(intent);
 
+            }
+        });
+
+        arrays = (RelativeLayout) findViewById(R.id.Arrays);
+        arrays.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this,TableGrid.class);
+                intent.putExtra("data", al.get(1));
                 startActivity(intent);
 
             }

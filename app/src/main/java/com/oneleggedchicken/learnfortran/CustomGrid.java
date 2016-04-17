@@ -1,6 +1,7 @@
 package com.oneleggedchicken.learnfortran;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -16,11 +17,12 @@ public class CustomGrid extends BaseAdapter{
 
     String [] text;
     String [] sctext;
-
     Context context;
+    Data d;
     int [] btn;
     private static LayoutInflater inflater=null;
     public CustomGrid(TableGrid tableGrid, String[] firstText,String[] seconText ) {
+
 
         sctext=seconText;
         text=firstText;
@@ -69,6 +71,9 @@ public class CustomGrid extends BaseAdapter{
 
             @Override
             public void onClick(View v) {
+
+            Intent intent = new Intent(context,ViewPagerMain.class);
+             context.startActivity(intent);
 
             }
         });
