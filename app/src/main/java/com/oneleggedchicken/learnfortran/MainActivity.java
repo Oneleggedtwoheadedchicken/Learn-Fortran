@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity
     String inviteText = "I'm learning Fortran on Learn Fortran application ! Checkout #FortranIsFun";
     String inviteTitle = "Share with friends";
     RelativeLayout arrays,basics,loops;
-    String [] basicsfirstArray,basicssecArray;
     loadXML x;
     ArrayList<Data> al;
     @Override
@@ -80,7 +79,7 @@ public class MainActivity extends AppCompatActivity
         arrays.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                System.out.println(al);
                 Intent intent = new Intent(MainActivity.this,TableGrid.class);
                 intent.putExtra("data", al.get(1));
                 startActivity(intent);

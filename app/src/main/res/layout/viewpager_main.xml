@@ -19,8 +19,17 @@
         android:layout_below="@+id/toolbar">
 
 
-
     </android.support.v4.view.ViewPager>
+
+    <Button
+        android:background="#8BC34A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:id="@+id/check"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
 
