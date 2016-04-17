@@ -1,7 +1,10 @@
 package com.oneleggedchicken.learnfortran;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.AssetManager;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 
 import java.io.BufferedReader;
 import java.io.InputStream;

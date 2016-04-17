@@ -103,41 +103,18 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.home) {
-            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-            drawer.closeDrawer(GravityCompat.START);
+            navigateHome();
         } else if (id == R.id.compiler) {
-
-            Intent intent = new Intent(MainActivity.this, Compiler.class);
-            startActivity(intent);
-
+            navigateCompiler();
         } else if (id == R.id.glossary) {
-
-            Intent intent = new Intent(MainActivity.this, Glossary.class);
-            startActivity(intent);
-
+            navigateGlossary();
         } else if (id == R.id.settings) {
 
         } else if (id == R.id.invite) {
-
-            Intent i = new Intent(Intent.ACTION_SEND);
-            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
-            i.setType("text/plain");
-            i.putExtra(Intent.EXTRA_TEXT, inviteText);
-            i.putExtra(Intent.EXTRA_SUBJECT, "https://play.google.com/store/apps/details?id=com.oneleggedchicken.learnfortran");
-            startActivity(Intent.createChooser(i, inviteTitle));
+            navigateInvite();
 
         } else if (id == R.id.rate) {
-
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse("market://details?id=com.oneleggedchicken.learnfortran"));
-            if (!MyStartActivity(intent)) {
-                intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.oneleggedchicken.learnfortran"));
-
-            }
-
-            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-            drawer.closeDrawer(GravityCompat.START);
-
+            navigateRate();
         }
         return true;
     }
@@ -156,8 +133,42 @@ public class MainActivity extends AppCompatActivity
         Compiler.webview = new WebView(this);
         Compiler.webview.getSettings().setJavaScriptEnabled(true);
         Compiler.webview.getSettings().setBuiltInZoomControls(true);
+        Compiler.webview.getSettings().setDisplayZoomControls(false);
 //        webview.loadUrl("file:///android_asset/editor.html");
         Compiler.webview.loadDataWithBaseURL("file:///android_asset/", Compiler.editorPage, "text/html", "utf-8", null);
 
     }
+    public void navigateHome(){
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+
+    }
+    public void navigateCompiler(){
+        Intent intent = new Intent(MainActivity.this,Compiler.class);
+        startActivity(intent);
+    }
+    public void navigateGlossary(){
+        Intent intent = new Intent(MainActivity.this, Glossary.class);
+        startActivity(intent);
+    }
+    public void navigateRate(){
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("market://details?id=com.oneleggedchicken.learnfortran"));
+        if (!MyStartActivity(intent)) {
+            intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.oneleggedchicken.learnfortran"));
+
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+    }
+    public void navigateInvite(){
+        Intent i = new Intent(Intent.ACTION_SEND);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+        i.setType("text/plain");
+        i.putExtra(Intent.EXTRA_TEXT, inviteText);
+        i.putExtra(Intent.EXTRA_SUBJECT, "https://play.google.com/store/apps/details?id=com.oneleggedchicken.learnfortran");
+        startActivity(Intent.createChooser(i, inviteTitle));
+    }
+
 }
