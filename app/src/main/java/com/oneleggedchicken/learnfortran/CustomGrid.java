@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -48,22 +49,20 @@ public class CustomGrid extends BaseAdapter{
     {
         TextView tv;
         TextView tv1;
-        ImageView img;
+        Button btnn;
     }
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-        // TODO Auto-generated method stub
         Holder holder=new Holder();
         View rowView;
 
         rowView = inflater.inflate(R.layout.table_item, null);
         holder.tv=(TextView) rowView.findViewById(R.id.firstText);
-        holder.img=(ImageView) rowView.findViewById(R.id.bottomText);
+        holder.tv1=(TextView) rowView.findViewById(R.id.bottomText);
+        holder.btnn=(Button) rowView.findViewById(R.id.table_btn);
 
         holder.tv.setText(text[position]);
         holder.tv1.setText(sctext[position]);
-
-        holder.img.setImageResource(btn[position]);
 
         rowView.setOnClickListener(new OnClickListener() {
 

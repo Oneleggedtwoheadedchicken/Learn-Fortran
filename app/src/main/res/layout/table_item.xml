@@ -11,7 +11,7 @@
         android:background="@drawable/table_btn"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/button7" />
+        android:id="@+id/table_btn" />
 
     <TextView
         android:layout_above="@id/button7"
@@ -30,7 +30,6 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/bottomText"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
