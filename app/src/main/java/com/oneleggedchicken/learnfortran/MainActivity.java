@@ -159,6 +159,7 @@ public class MainActivity extends AppCompatActivity
         Compiler.webview.getSettings().setJavaScriptEnabled(true);
         Compiler.webview.getSettings().setBuiltInZoomControls(true);
         Compiler.webview.getSettings().setDisplayZoomControls(false);
+        Compiler.webview.addJavascriptInterface(new codeEditorHandler(),"handler");
 //        webview.loadUrl("file:///android_asset/editor.html");
         Compiler.webview.loadDataWithBaseURL("file:///android_asset/", Compiler.editorPage, "text/html", "utf-8", null);
 
