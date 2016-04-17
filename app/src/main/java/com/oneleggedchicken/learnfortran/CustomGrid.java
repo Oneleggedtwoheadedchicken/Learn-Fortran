@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,12 +20,12 @@ public class CustomGrid extends BaseAdapter{
     Context context;
     int [] btn;
     private static LayoutInflater inflater=null;
-    public CustomGrid(MainActivity mainActivity, String[] firstText,String[] seconText, int[] Button) {
+    public CustomGrid(TableGrid tableGrid, String[] firstText,String[] seconText ) {
 
         sctext=seconText;
         text=firstText;
-        context=mainActivity;
-        btn=Button;
+        context=tableGrid;
+       // btn=Button;
         inflater = ( LayoutInflater )context.
                 getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -49,7 +50,7 @@ public class CustomGrid extends BaseAdapter{
     {
         TextView tv;
         TextView tv1;
-        Button btnn;
+      //  Button btnn;
     }
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
@@ -59,7 +60,7 @@ public class CustomGrid extends BaseAdapter{
         rowView = inflater.inflate(R.layout.table_item, null);
         holder.tv=(TextView) rowView.findViewById(R.id.firstText);
         holder.tv1=(TextView) rowView.findViewById(R.id.bottomText);
-        holder.btnn=(Button) rowView.findViewById(R.id.table_btn);
+      //  holder.btnn=(Button) rowView.findViewById(R.id.table_btn);
 
         holder.tv.setText(text[position]);
         holder.tv1.setText(sctext[position]);

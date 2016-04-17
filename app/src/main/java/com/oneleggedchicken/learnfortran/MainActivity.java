@@ -12,8 +12,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.webkit.WebView;
+import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 
 import java.lang.*;
 
@@ -22,10 +25,16 @@ public class MainActivity extends AppCompatActivity
 
     String inviteText = "I'm learning Fortran on Learn Fortran application ! Checkout #FortranIsFun";
     String inviteTitle = "Share with friends";
+    RelativeLayout arrays,basics,loops;
+    String [] basicsfirstArray,basicssecArray;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        basicsfirstArray = getResources().getStringArray(R.array.basicsfirst);
+        basicssecArray = getResources().getStringArray(R.array.basicssecond);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -38,6 +47,21 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         // Load Compiler in The Background
         loadCompiler();
+
+        basics = (RelativeLayout) findViewById(R.id.Basics);
+        basics.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this,TableGrid.class);
+                intent.putExtra("array",basicsfirstArray);
+                intent.putExtra("secarray",basicssecArray);
+
+                startActivity(intent);
+
+            }
+        });
+
     }
 
     @Override

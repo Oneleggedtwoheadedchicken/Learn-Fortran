@@ -125,8 +125,8 @@ and Loops"
             >
             <ImageView
             android:src="@drawable/arrays"
-            android:layout_width="80dp"
-            android:layout_height="75dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"/>
         </RelativeLayout>

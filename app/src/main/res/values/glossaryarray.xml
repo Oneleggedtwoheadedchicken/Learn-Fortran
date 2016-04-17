@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="basicsfirst">
+        <item>cacssac</item>
+        <item>acsca</item>
+        <item>acsca</item>
+
+    </string-array>
+    <string-array name="basicssecond">
+        <item>cacssac</item>
+        <item>acsca</item>
+        <item>acsca</item>
+    </string-array>
+
     <string-array name="glossary">
         <item>Arithmetic IF	: Transfers control, depending on whether value of an arithmetic expression is negative, zero, or positive</item>
         <item>ASSIGN : Assigns a statement number to a variable</item>
