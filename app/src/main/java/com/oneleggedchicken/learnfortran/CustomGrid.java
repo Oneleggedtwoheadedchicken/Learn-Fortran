@@ -57,8 +57,8 @@ public class CustomGrid extends BaseAdapter{
         View rowView;
 
         rowView = inflater.inflate(R.layout.table_item, null);
-        holder.tv=(TextView) rowView.findViewById(R.id.);
-        holder.img=(ImageView) rowView.findViewById(R.id.);
+        holder.tv=(TextView) rowView.findViewById(R.id.firstText);
+        holder.img=(ImageView) rowView.findViewById(R.id.bottomText);
 
         holder.tv.setText(text[position]);
         holder.tv1.setText(sctext[position]);
