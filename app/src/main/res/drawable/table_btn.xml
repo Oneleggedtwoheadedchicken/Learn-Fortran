@@ -14,10 +14,8 @@
     </item>
 
 
-    <item android:bottom="20dp">
+    <item android:bottom="40dp">
         <shape android:shape="rectangle" >
-            <size android:height="40dp"
-                android:width="200dp" />
             <solid android:color="#ffffff" />
         </shape>
     </item>
