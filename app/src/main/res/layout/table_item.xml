@@ -14,7 +14,7 @@
         android:id="@+id/table_btn" />
 
     <TextView
-        android:layout_above="@id/button7"
+        android:layout_above="@id/table_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -24,7 +24,7 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:layout_above="@id/button7"
+        android:layout_above="@id/table_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"

@@ -122,7 +122,14 @@ and Loops"
             android:id="@+id/Arrays"
             android:layout_gravity="center"
 
-            ></RelativeLayout>
+            >
+            <ImageView
+            android:src="@drawable/arrays"
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+        </RelativeLayout>
             <TextView
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
