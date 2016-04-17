@@ -23,7 +23,7 @@ public class TableGrid  extends Activity {
         firstText=d.getgridtext();
         secText = d.getgridsectext();
         gv=(GridView) findViewById(R.id.gridView);
-        gv.setAdapter(new CustomGrid(this,firstText , secText,d));
+        gv.setAdapter(new CustomGrid(this,firstText, secText,d));
 
     }
 }

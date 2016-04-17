@@ -21,8 +21,20 @@ public class loadXML {
         String data = null;
         Log.d("here","1");
         dataArray = new ArrayList<>();
-        ArrayList<String[]> questionhead = new ArrayList<>();
-        ArrayList<String[]> questiontext = new ArrayList<>();
+        ArrayList<String[]> firstquestionhead = new ArrayList<>();
+        ArrayList<String[]> firstquestiontext = new ArrayList<>();
+        ArrayList<String[]> secondquestionhead = new ArrayList<>();
+        ArrayList<String[]> secondquestiontext = new ArrayList<>();
+        ArrayList<String[]> thirdquestionhead = new ArrayList<>();
+        ArrayList<String[]> thirdquestiontext = new ArrayList<>();
+        ArrayList<String[]> fourthquestionhead = new ArrayList<>();
+        ArrayList<String[]> fourthquestiontext = new ArrayList<>();
+        ArrayList<String[]> fifthquestionhead = new ArrayList<>();
+        ArrayList<String[]> fifthquestiontext = new ArrayList<>();
+        ArrayList<String[]> sixthquestionhead = new ArrayList<>();
+        ArrayList<String[]> sixthquestiontext = new ArrayList<>();
+        ArrayList<String[]> seventhquestionhead = new ArrayList<>();
+        ArrayList<String[]> seventhquestiontext = new ArrayList<>();
         ArrayList<String[]> gridtext = new ArrayList<>();
         ArrayList<String[]> gridsectext = new ArrayList<>();
         int eventType = xmlrp.getEventType();
@@ -37,19 +49,44 @@ public class loadXML {
                     break;
                 case XmlPullParser.END_TAG:
                     if (name.equals("question")) {
-                        if (!questionhead.isEmpty()) {
-                            dataArray.add(new Data(questionhead.get(0), questiontext.get(0), gridtext.get(0),gridsectext.get(0)));
+                        if (!secondquestionhead.isEmpty()) {
+                            dataArray.add(new Data(firstquestionhead.get(0), firstquestiontext.get(0), secondquestionhead.get(0), secondquestiontext.get(0), thirdquestionhead.get(0), thirdquestiontext.get(0), fourthquestionhead.get(0), fourthquestiontext.get(0),
+                                    fifthquestionhead.get(0), fifthquestiontext.get(0), sixthquestionhead.get(0), sixthquestiontext.get(0), seventhquestionhead.get(0), seventhquestiontext.get(0), gridtext.get(0), gridsectext.get(0)));
                         }
-                    } else if (name.equals("questionhead")) {
-                        questionhead.add(0, data.trim().split(","));
-                    } else if (name.equals("questiontext")) {
-                        questiontext.add(0, data.trim().split(","));
+                    } else if (name.equals("firstquestionhead")) {
+                        firstquestionhead.add(0, data.trim().split(","));
+                    } else if (name.equals("firstquestiontext")) {
+                        firstquestiontext.add(0, data.trim().split(","));
+                    } else if (name.equals("secondquestionhead")) {
+                        secondquestionhead.add(0, data.trim().split(","));
+                    } else if (name.equals("secondquestiontext")) {
+                        secondquestiontext.add(0, data.trim().split(","));
+                    } else if (name.equals("thirdquestionhead")) {
+                        thirdquestionhead.add(0, data.trim().split(","));
+                    } else if (name.equals("thirdquestiontext")) {
+                        thirdquestiontext.add(0, data.trim().split(","));
+                    } else if (name.equals("fourthquestionhead")) {
+                        fourthquestionhead.add(0, data.trim().split(","));
+                    } else if (name.equals("fourthquestiontext")) {
+                        fourthquestiontext.add(0, data.trim().split(","));
+                    } else if (name.equals("fifthquestionhead")) {
+                        fifthquestionhead.add(0, data.trim().split(","));
+                    } else if (name.equals("fifthquestiontext")) {
+                        fifthquestiontext.add(0, data.trim().split(","));
+                    } else if (name.equals("sixthquestionhead")) {
+                        sixthquestionhead.add(0, data.trim().split(","));
+                    } else if (name.equals("sixthquestiontext")) {
+                        sixthquestiontext.add(0, data.trim().split(","));
+                    } else if (name.equals("seventhquestionhead")) {
+                        seventhquestionhead.add(0, data.trim().split(","));
+                    } else if (name.equals("seventhquestiontext")) {
+                        seventhquestiontext.add(0, data.trim().split(","));
                     } else if (name.equals("gridtext")) {
                         gridtext.add(0, data.trim().split(","));
                     } else if (name.equals("gridsectext")) {
                         gridsectext.add(0, data.trim().split(","));
                     }
-             
+
                     break;
             }
             eventType = xmlrp.next();

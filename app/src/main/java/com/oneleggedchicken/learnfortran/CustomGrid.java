@@ -23,10 +23,13 @@ public class CustomGrid extends BaseAdapter{
     Context context;
     Data d;
     int [] btn;
+    ArrayList<Data> al;
+
     private static LayoutInflater inflater=null;
     public CustomGrid(TableGrid tableGrid, String[] firstText, String[] seconText, Data d1) {
 
         d = d1;
+
         sctext=seconText;
         text=firstText;
         context=tableGrid;
@@ -66,7 +69,6 @@ public class CustomGrid extends BaseAdapter{
         holder.tv=(TextView) rowView.findViewById(R.id.firstText);
         holder.tv1=(TextView) rowView.findViewById(R.id.bottomText);
         holder.btnn=(Button) rowView.findViewById(R.id.table_btn);
-
         holder.tv.setText(text[position]);
         holder.tv1.setText(sctext[position]);
 
@@ -74,10 +76,52 @@ public class CustomGrid extends BaseAdapter{
 
             @Override
             public void onClick(View v) {
+                if (position == 0) {
 
-                Intent intent = new Intent(context, ViewPagerMain.class);
-                intent.putExtra("data", d);
-                context.startActivity(intent);
+                    Intent intent = new Intent(context, ViewPagerMain.class);
+                    intent.putExtra("headarray", d.getfirstquestionhead());
+                    intent.putExtra("questionarray", d.getfirstquestiontext());
+
+                    context.startActivity(intent);
+
+                } else if (position == 1) {
+
+                    Intent intent = new Intent(context, ViewPagerMain.class);
+                    intent.putExtra("headarray", d.getsecondquestionhead());
+                    intent.putExtra("questionarray", d.getsecondquestiontext());
+                    context.startActivity(intent);
+                } else if (position == 2) {
+
+                    Intent intent = new Intent(context, ViewPagerMain.class);
+                    intent.putExtra("headarray", d.getthirdquestionhead());
+                    intent.putExtra("questionarray", d.getthirdquestiontext());
+                    context.startActivity(intent);
+                }else if (position == 3) {
+
+                    Intent intent = new Intent(context, ViewPagerMain.class);
+                    intent.putExtra("headarray", d.getfourthquestionhead());
+                    intent.putExtra("questionarray", d.getfourthquestiontext());
+                    context.startActivity(intent);
+                }else if (position == 4) {
+
+                    Intent intent = new Intent(context, ViewPagerMain.class);
+                    intent.putExtra("headarray", d.getfifthquestionhead());
+                    intent.putExtra("questionarray", d.getfifthquestionhead());
+                    context.startActivity(intent);
+                }else if (position == 5) {
+
+                    Intent intent = new Intent(context, ViewPagerMain.class);
+                    intent.putExtra("headarray", d.getsixthquestionhead());
+                    intent.putExtra("questionarray", d.getsixthquestiontext());
+                    context.startActivity(intent);
+                }else if (position == 6) {
+
+                    Intent intent = new Intent(context, ViewPagerMain.class);
+                    intent.putExtra("headarray", d.getseventhquestionhead());
+                    intent.putExtra("questionarray", d.getseventhquestiontext());
+                    context.startActivity(intent);
+                }
+
 
             }
         });
