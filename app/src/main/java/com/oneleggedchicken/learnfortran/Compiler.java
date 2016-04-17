@@ -18,7 +18,6 @@ public class Compiler extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.compiler_web_view);
         fl = (FrameLayout) findViewById(R.id.compiler_layout);
-//        fl = new FrameLayout(this);
         fl.addView(Compiler.webview);
     }
 
