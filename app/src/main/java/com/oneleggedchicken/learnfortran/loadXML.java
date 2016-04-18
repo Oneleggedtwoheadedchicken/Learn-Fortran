@@ -54,37 +54,37 @@ public class loadXML {
                                     fifthquestionhead.get(0), fifthquestiontext.get(0), sixthquestionhead.get(0), sixthquestiontext.get(0), seventhquestionhead.get(0), seventhquestiontext.get(0), gridtext.get(0), gridsectext.get(0)));
                         }
                     } else if (name.equals("firstquestionhead")) {
-                        firstquestionhead.add(0, data.trim().split(","));
+                        firstquestionhead.add(0, data.trim().split(">>>"));
                     } else if (name.equals("firstquestiontext")) {
-                        firstquestiontext.add(0, data.trim().split(","));
+                        firstquestiontext.add(0, data.trim().split(">>>"));
                     } else if (name.equals("secondquestionhead")) {
-                        secondquestionhead.add(0, data.trim().split(","));
+                        secondquestionhead.add(0, data.trim().split(">>>"));
                     } else if (name.equals("secondquestiontext")) {
-                        secondquestiontext.add(0, data.trim().split(","));
+                        secondquestiontext.add(0, data.trim().split(">>>"));
                     } else if (name.equals("thirdquestionhead")) {
-                        thirdquestionhead.add(0, data.trim().split(","));
+                        thirdquestionhead.add(0, data.trim().split(">>>"));
                     } else if (name.equals("thirdquestiontext")) {
-                        thirdquestiontext.add(0, data.trim().split(","));
+                        thirdquestiontext.add(0, data.trim().split(">>>"));
                     } else if (name.equals("fourthquestionhead")) {
-                        fourthquestionhead.add(0, data.trim().split(","));
+                        fourthquestionhead.add(0, data.trim().split(">>>"));
                     } else if (name.equals("fourthquestiontext")) {
-                        fourthquestiontext.add(0, data.trim().split(","));
+                        fourthquestiontext.add(0, data.trim().split(">>>"));
                     } else if (name.equals("fifthquestionhead")) {
-                        fifthquestionhead.add(0, data.trim().split(","));
+                        fifthquestionhead.add(0, data.trim().split(">>>"));
                     } else if (name.equals("fifthquestiontext")) {
-                        fifthquestiontext.add(0, data.trim().split(","));
+                        fifthquestiontext.add(0, data.trim().split(">>>"));
                     } else if (name.equals("sixthquestionhead")) {
-                        sixthquestionhead.add(0, data.trim().split(","));
+                        sixthquestionhead.add(0, data.trim().split(">>>"));
                     } else if (name.equals("sixthquestiontext")) {
-                        sixthquestiontext.add(0, data.trim().split(","));
+                        sixthquestiontext.add(0, data.trim().split(">>>"));
                     } else if (name.equals("seventhquestionhead")) {
-                        seventhquestionhead.add(0, data.trim().split(","));
+                        seventhquestionhead.add(0, data.trim().split(">>>"));
                     } else if (name.equals("seventhquestiontext")) {
-                        seventhquestiontext.add(0, data.trim().split(","));
+                        seventhquestiontext.add(0, data.trim().split(">>>"));
                     } else if (name.equals("gridtext")) {
-                        gridtext.add(0, data.trim().split(","));
+                        gridtext.add(0, data.trim().split(">>>"));
                     } else if (name.equals("gridsectext")) {
-                        gridsectext.add(0, data.trim().split(","));
+                        gridsectext.add(0, data.trim().split(">>>"));
                     }
 
                     break;

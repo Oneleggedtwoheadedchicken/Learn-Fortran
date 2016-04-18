@@ -11,7 +11,7 @@ public class TableGrid  extends Activity {
 
     GridView gv;
     ArrayList Button;
-    String[] firstText,secText,question,questionhead;
+    String[] firstText,secText;
     Data d;
     ArrayList<Data> al;
     @Override

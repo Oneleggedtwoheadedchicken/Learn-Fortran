@@ -2,103 +2,184 @@
 <questions>
 	<question>
 	<firstquestionhead>
-		ssssssssssss,aaaaaaaaaaaaaaaa
+		Fortran Program Structure >>>Identifiers1/2>>>Identifiers2/2>>>Program Comments
 	</firstquestionhead>
 		<firstquestiontext>
-			ssssssssssss,aaaaaaaaaaaaaaaa
+
+A Fortran  program has the following form:
+-program-name is the name of that program
+-specification-partexecution-partand , specificationpart , executionpart ,
+subprogram-partare and IMPLICIT NONE optional.
+-end program
+
+PROGRAM program-name
+IMPLICIT NONE
+[specification-part]
+[execution-part]
+[subprogram-part]
+[subprogrampart]
+END PROGRAM program-name
+			>>>
+A Fortran identifier can have no more than 31 characters.
+-The first one must be a letter.  The remaining characters, if any, may be letters, digits, or underscores.
+-Fortran identifiers are CASE INSENSITIVE.
+Examples: A, Name, toTAL123, System_, myFile_01, my_1st_F_program_X_.
+-Identifiers Name, nAmE, naME and NamE are the same.
+			>>>
+-Unlike Java,C,C++,etc, Fortran does not have reserved words. This means one may use Fortran keywords as identifiers.
+Therefore, PROGRAM, end, IF, then, DO, etc
+may be used as identifiers. Fortran compilers are able to recognize keywords from their “positions” in a statement.
+Yes, end = program + if/(goto –while)is legal!
+			>>>
+-Comments start with a!
+-Everything following !will be ignored
+-This is similar to//in C/C++
+
+! This is an example
+!
+PROGRAM Comment
+..........
+READ(*,*) Year  ! read in the value of Year
+..........
+Year = Year + 1  ! add 1 to Year
+..........
+END PROGRAM Comment
 		</firstquestiontext>
 		<secondquestionhead>
-			lalalala,lalalala
+			Continuation Lines >>> Alphabets
 		</secondquestionhead>
 		<secondquestiontext>
-			lalalal,lalalal
+Fortran is not completely format free!
+-A statement must starts with a new line.
+-If a statement is too long to fit on one line it has to be continued.
+-The continuation character is &amp;, which is not part of the statement.
+
+-Total = Total + is &amp;
+-Amount * Payments
+-! Total = Total + Amount*Payments
+-PROGRAM  is &amp;
+-ContinuationLine
+-! PROGRAM ContinuationLine
+			>>>
+Fortran alphabets include the following:
+-Upper and lower cases letters
+-Digits
+-Special characters
+
+space
+' "
+( ) * + - /: =
+_ ! &amp; $ ; <![CDATA[<]]> <![CDATA[>]]>
+% ? , .
 		</secondquestiontext>
 		<thirdquestionhead>
-			ssssssssssss,aaaaaaaaaaaaaaaa
+			Constants>>>Real Constant>>>Logical Constant>>>Character 1/2>>>Character 2/2
 		</thirdquestionhead>
 		<thirdquestiontext>
-			ssssssssssss,aaaaaaaaaaaaaaaa
-		</thirdquestiontext>
+A Fortran constant may be an integer, real,logical,complex and character.
+An integer constant is a string of digits with an optional sign:12345 345+789+0
+			>>>
+A real constant has two forms,decimal and and exponential:
+-In the decimal form a real constant is a string of digits with exactly one decimal point.
+A real constant may include an optional sign.
+2.45, .13, 13.,-012-12 0.12,  .12.
+
+In the exponential form a real constant starts with an integer/real, followed by a E/e, followed by an integer (ie the exponent)
+			>>>
+A logical constant is either .TRUE.or .FALSE.
+-Note that the periods surrounding TRUE and FALSE are required!
+			>>>
+A character string or character constant is  a string of characters enclosed between two double quotes or two single quotes.
+Examples: “abc”, ‘John Dow’, “#$%^”, and ‘()()’.
+-The content of a character string consists of all characters between the quotes.
+Example : The content of‘John Dow’isJohn Dow content of  John Dow is John Dow.
+			>>>
+-The length of a string is the number of number of characters between the quotes. The length of‘John Dow’is 8, space included.
+-A string has length zero is an empty string.
+-If single (or double) quotes are used in a string, then use double (or single) quotes as delimiters.
+Examples: “Adam’s cat”and ‘I said “go away”’.
+-Two consecutive quotes are treated as one! ‘Lori’’s Apple’is Lori’s Apple
+					</thirdquestiontext>
 		<fourthquestionhead>
-			ssssssssssss,aaaaaaaaaaaaaaaa
+			ssssssssssss>>>aaaaaaaaaaaaaaaa
 		</fourthquestionhead>
 		<fourthquestiontext>
-			ssssssssssss,aaaaaaaaaaaaaaaa
+			ssssssssssss>>>aaaaaaaaaaaaaaaa
 		</fourthquestiontext>
 		<fifthquestionhead>
-			ssssssssssss,aaaaaaaaaaaaaaaa
+			ssssssssssss>>>aaaaaaaaaaaaaaaa
 		</fifthquestionhead>
 		<fifthquestiontext>
-			ssssssssssss,aaaaaaaaaaaaaaaa
+			ssssssssssss>>>aaaaaaaaaaaaaaaa
 		</fifthquestiontext>
 		<sixthquestionhead>
-			ssssssssssss,aaaaaaaaaaaaaaaa
+			ssssssssssss>>>aaaaaaaaaaaaaaaa
 		</sixthquestionhead>
 		<sixthquestiontext>
-			ssssssssssss,aaaaaaaaaaaaaaaa
+			ssssssssssss>>>aaaaaaaaaaaaaaaa
 		</sixthquestiontext>
 		<seventhquestionhead>
-			ssssssssssss,aaaaaaaaaaaaaaaa
+			ssssssssssss>>>aaaaaaaaaaaaaaaa
 		</seventhquestionhead>
 		<seventhquestiontext>
-			ssssssssssss,aaaaaaaaaaaaaaaa
+			ssssssssssss>>>aaaaaaaaaaaaaaaa
 		</seventhquestiontext>
 		<gridtext>
-			ssssssssssss,aaaaaaaaaaaaaaaa
+			Program Structure>>>Continuation Lines &amp; Alphabets>>>Constants
 		</gridtext>
 		<gridsectext>
-			ssssssssssss,aaaaaaaaaaaaaaaa
+			ssssssssssss>>>aaaaaaaaaaaaaaaa>>>lalalaa
 		</gridsectext>
 	</question>
 
 	<question>
 	<firstquestionhead>
-		ssssssssssss,aaaaaaaaaaaaaaaa
+		ssssssssssss>>>aaaaaaaaaaaaaaaa
 	</firstquestionhead>
 	<firstquestiontext>
-		ssssssssssss,aaaaaaaaaaaaaaaa
+		ssssssssssss>>>aaaaaaaaaaaaaaaa
 	</firstquestiontext>
 	<secondquestionhead>
-		ssssssssssss,aaaaaaaaaaaaaaaa
+		ssssssssssss>>>aaaaaaaaaaaaaaaa
 	</secondquestionhead>
 	<secondquestiontext>
-		ssssssssssss,aaaaaaaaaaaaaaaa
+		ssssssssssss>>>aaaaaaaaaaaaaaaa
 	</secondquestiontext>
 	<thirdquestionhead>
-		ssssssssssss,aaaaaaaaaaaaaaaa
+		ssssssssssss>>>aaaaaaaaaaaaaaaa
 	</thirdquestionhead>
 	<thirdquestiontext>
-		ssssssssssss,aaaaaaaaaaaaaaaa
+		ssssssssssss>>>aaaaaaaaaaaaaaaa
 	</thirdquestiontext>
 	<fourthquestionhead>
-		ssssssssssss,aaaaaaaaaaaaaaaa
+		ssssssssssss>>>aaaaaaaaaaaaaaaa
 	</fourthquestionhead>
 	<fourthquestiontext>
-		ssssssssssss,aaaaaaaaaaaaaaaa
+		ssssssssssss>>>aaaaaaaaaaaaaaaa
 	</fourthquestiontext>
 	<fifthquestionhead>
-		ssssssssssss,aaaaaaaaaaaaaaaa
+		ssssssssssss>>>aaaaaaaaaaaaaaaa
 	</fifthquestionhead>
 	<fifthquestiontext>
-		ssssssssssss,aaaaaaaaaaaaaaaa
+		ssssssssssss>>>aaaaaaaaaaaaaaaa
 	</fifthquestiontext>
 	<sixthquestionhead>
-		ssssssssssss,aaaaaaaaaaaaaaaa
+		ssssssssssss>>>aaaaaaaaaaaaaaaa
 	</sixthquestionhead>
 	<sixthquestiontext>
-		ssssssssssss,aaaaaaaaaaaaaaaa
+		ssssssssssss>>>aaaaaaaaaaaaaaaa
 	</sixthquestiontext>
 	<seventhquestionhead>
-		ssssssssssss,aaaaaaaaaaaaaaaa
+		ssssssssssss>>>aaaaaaaaaaaaaaaa
 	</seventhquestionhead>
 	<seventhquestiontext>
-		ssssssssssss,aaaaaaaaaaaaaaaa
+		ssssssssssss>>>aaaaaaaaaaaaaaaa
 	</seventhquestiontext>
 	<gridtext>
-		ssssssssssss,aaaaaaaaaaaaaaaa
+		ssssssssssss>>>aaaaaaaaaaaaaaaa
 	</gridtext>
 	<gridsectext>
-		ssssssssssss,aaaaaaaaaaaaaaaa
+		ssssssssssss>>>aaaaaaaaaaaaaaaa
 	</gridsectext>
 	</question>
 </questions>
