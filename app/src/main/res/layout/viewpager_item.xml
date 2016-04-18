@@ -21,6 +21,7 @@
     </ScrollView>
 
     <TextView
+    android:layout_marginTop="10dp"
     android:id="@+id/questionhead"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -35,6 +36,8 @@
     android:layout_centerHorizontal="true"
         />
 
+
+
     <TextView
         android:textSize="15dp"
         android:gravity="center"
@@ -46,5 +49,15 @@
         android:layout_gravity="center"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:background="#8BC34A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:id="@+id/check"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
