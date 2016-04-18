@@ -101,10 +101,32 @@ Examples: “Adam’s cat”and ‘I said “go away”’.
 -Two consecutive quotes are treated as one! ‘Lori’’s Apple’is Lori’s Apple
 					</thirdquestiontext>
 		<fourthquestionhead>
-			ssssssssssss>>>aaaaaaaaaaaaaaaa
+			Declarations:1/3 >>> Declarations:2/3 >>> Declarations:3/3
 		</fourthquestionhead>
+
 		<fourthquestiontext>
-			ssssssssssss>>>aaaaaaaaaaaaaaaa
+
+Fortran uses the following for variable declarations, where type-specifieris one of the following keywords: INTEGER, REAL, LOGICAL, COMPLEX and CHARACTER, and list is a sequence of identifiers separated by commas.
+type-specifier :: list
+Examples:
+INTEGER:: Zip, Total, counter
+REAL :: AVERAGE, x, Difference
+LOGICAL:: Condition, OK
+COMPLEX:: Conjugate
+		>>>
+Character variables require additional information, the string length:
+-Keyword CHARACTER must be followed by a length attribute (LEN = l), where "l" is the length of the string the length of the string.
+-The LEN=part is optional.
+-If the length of a string is 1, one may use CHARACTER without length attribute.
+		>>>
+
+Examples:
+-CHARACTER(LEN=20) :: Answer, Quote
+Variables Answer and Quote can hold strings up to 20 characters.
+-CHARACTER(20) :: Answer, Quote
+is the same as above.
+-CHARACTER :: Keypressmeans
+variable Keypresscan only hold ONE character
 		</fourthquestiontext>
 		<fifthquestionhead>
 			ssssssssssss>>>aaaaaaaaaaaaaaaa
@@ -125,10 +147,10 @@ Examples: “Adam’s cat”and ‘I said “go away”’.
 			ssssssssssss>>>aaaaaaaaaaaaaaaa
 		</seventhquestiontext>
 		<gridtext>
-			Program Structure>>>Continuation Lines &amp; Alphabets>>>Constants
+			Program Structure>>>Continuation Lines &amp; Alphabets>>>Constants>>>Declarations &amp; (PARAMETER) Attribute
 		</gridtext>
 		<gridsectext>
-			ssssssssssss>>>aaaaaaaaaaaaaaaa>>>lalalaa
+			ssssssssss>>>aaaaaaaaaaa>>>lalalaa>>>ssac
 		</gridsectext>
 	</question>
 
