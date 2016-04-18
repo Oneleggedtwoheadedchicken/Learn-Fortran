@@ -11,7 +11,9 @@ import java.util.ArrayList;
 /**
  * Created by a on 4/17/2016.
  */
+
 public class ViewPagerMain extends Activity {
+
 
     public static ViewPager viewPager;
     ViewPagerAdapter adapter;
@@ -21,7 +23,6 @@ public class ViewPagerMain extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.viewpager_main);
         viewPager = (ViewPager) findViewById(R.id.pager);
-
         headarray = getIntent().getStringArrayExtra("headarray");
         questionarray = getIntent().getStringArrayExtra("questionarray");
         adapter = new ViewPagerAdapter(ViewPagerMain.this, headarray,questionarray);

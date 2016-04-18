@@ -101,18 +101,17 @@ Examples: “Adam’s cat”and ‘I said “go away”’.
 -Two consecutive quotes are treated as one! ‘Lori’’s Apple’is Lori’s Apple
 					</thirdquestiontext>
 		<fourthquestionhead>
-			Declarations:1/3 >>> Declarations:2/3 >>> Declarations:3/3
+			Declarations:1/3 >>>Complete>>> Declarations:2/3 >>> Declarations:3/3
 		</fourthquestionhead>
 
 		<fourthquestiontext>
 
 Fortran uses the following for variable declarations, where type-specifieris one of the following keywords: INTEGER, REAL, LOGICAL, COMPLEX and CHARACTER, and list is a sequence of identifiers separated by commas.
 type-specifier :: list
-Examples:
-INTEGER:: Zip, Total, counter
-REAL :: AVERAGE, x, Difference
-LOGICAL:: Condition, OK
-COMPLEX:: Conjugate
+			>>>
+---INTEGER---:: y = 5---
+---REAL---:: x = 20.---
+---LOGICAL---:: ok = .TRUE.---.
 		>>>
 Character variables require additional information, the string length:
 -Keyword CHARACTER must be followed by a length attribute (LEN = l), where "l" is the length of the string the length of the string.
