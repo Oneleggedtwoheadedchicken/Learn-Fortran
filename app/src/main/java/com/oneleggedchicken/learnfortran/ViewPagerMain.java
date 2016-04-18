@@ -16,8 +16,6 @@ public class ViewPagerMain extends Activity {
     public static ViewPager viewPager;
     ViewPagerAdapter adapter;
     String[] headarray,questionarray;
-    Button check;
-    Data d;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
