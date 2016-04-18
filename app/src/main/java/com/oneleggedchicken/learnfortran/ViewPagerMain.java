@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class ViewPagerMain extends Activity {
 
-    ViewPager viewPager;
+    public static ViewPager viewPager;
     ViewPagerAdapter adapter;
     String[] headarray,questionarray;
     Button check;
@@ -29,22 +29,6 @@ public class ViewPagerMain extends Activity {
         adapter = new ViewPagerAdapter(ViewPagerMain.this, headarray,questionarray);
         viewPager.setAdapter(adapter);
 
-        check = (Button) findViewById(R.id.check);
-
-        check.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (viewPager.getCurrentItem()+2 > headarray.length) {
-
-                    ViewPagerMain.this.finish();
-
-                } else {
-
-                    viewPager.setCurrentItem(viewPager.getCurrentItem()+1, true);
-                }
-
-            }
-        });
 
 
     }
