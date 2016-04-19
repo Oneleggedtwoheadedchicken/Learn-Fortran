@@ -104,32 +104,82 @@ public class ViewPagerAdapter extends PagerAdapter {
 
         else {
            // TableRow.LayoutParams params = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.MATCH_PARENT);
-            params.gravity = Gravity.TOP;
+          //  params.gravity = Gravity.TOP;
 
-            tv1 = new TextView(context);
-           // tv1.setLayoutParams(params);
+            View tr = inflater.inflate(R.layout.table_row, null);
+
+            row = (TableRow) tr.findViewById(R.id.tr);
+            row1 = (TableRow) tr.findViewById(R.id.tr2);
+
+            tv1 = (TextView) tr.findViewById(R.id.firtstext);
+            tv2 = (TextView) tr.findViewById(R.id.secondtext);
+            tv3 = (TextView) tr.findViewById(R.id.firt1stext);
+            tv4 = (TextView) tr.findViewById(R.id.second1text);
+            tv5 = (TextView) tr.findViewById(R.id.firtstext);
+            tv6 = (TextView) tr.findViewById(R.id.secondtext);
+            tv7 = (TextView) tr.findViewById(R.id.firtstext);
+            tv8 = (TextView) tr.findViewById(R.id.secondtext);
+            et1 = (EditText) tr.findViewById(R.id.editText);
+            et2 = (EditText) tr.findViewById(R.id.edit1Text);
+            et3 = (EditText) tr.findViewById(R.id.editText);
+            et4 = (EditText) tr.findViewById(R.id.editText);
+
+
+           /*  tv1 = new TextView(context);
+
+
+            //   tv1.setLayoutParams(params);
             tv2 = new TextView(context);
-            tv2.setLayoutParams(params);
-            tv3 = new TextView(context);
-           tv3.setLayoutParams(params);
+
+            // tv2.setLayoutParams(params);
+           tv3 = new TextView(context);
+
+            // tv3.setLayoutParams(params);
             tv4 = new TextView(context);
+
+
             // tv4.setLayoutParams(params);
-            tv5 = new TextView(context);
+           tv5 = new TextView(context);
+
+
             tv6 = new TextView(context);
+
+
             tv7 = new TextView(context);
+
+
             tv8 = new TextView(context);
+
+
             et1 = new EditText(context);
-           //et1.setLayoutParams(params);
+
+
+            //et1.setLayoutParams(params);
             et2 = new EditText(context);
             et3 = new EditText(context);
-            et4 = new EditText(context);
+            et4 = new EditText(context);*/
+            attempsnum = 0;
+            inflater = (LayoutInflater) context
+                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            View itemView = inflater.inflate(R.layout.viewpager_test, container,
+                    false);
+
+            questionhead = (TextView) itemView.findViewById(R.id.questionhead);
+            questionhead.setText(headarray[position]);
+            attemps = (TextView )itemView.findViewById(R.id.attemps);
+            time = (Chronometer)itemView.findViewById(R.id.time);
+            time.start();
+            attemps.setText("Attemps:" + attempsnum);
+            table = (TableLayout) itemView.findViewById(R.id.layout);
+
             s = Arrays.asList(questionarray).get(position);
            // s = Arrays.toString(());
            // s = s.replaceAll(",", "").replaceAll("\\[|\\]","");
             questionss = s.split("---");
          //   number1 = Arrays.asList(questionarray).get(3).length();
            // number2 = Arrays.asList(questionarray).get(5).length();
-            if(Arrays.asList(questionss).size()>0) {
+
+           if(Arrays.asList(questionss).size()>0) {
                 tv1.setText(Arrays.asList(questionss).get(0));
             }
             if(Arrays.asList(questionss).size()>2) {
@@ -158,52 +208,46 @@ public class ViewPagerAdapter extends PagerAdapter {
                 tv8.setText(Arrays.asList(questionss).get(11));
             }
 
-            attempsnum = 0;
-            inflater = (LayoutInflater) context
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            View itemView = inflater.inflate(R.layout.viewpager_test, container,
-                    false);
 
-            questionhead = (TextView) itemView.findViewById(R.id.questionhead);
-            questionhead.setText(headarray[position]);
-            attemps = (TextView )itemView.findViewById(R.id.attemps);
-            time = (Chronometer)itemView.findViewById(R.id.time);
-            time.start();
-            attemps.setText("Attemps:" + attempsnum);
-            table = (TableLayout) itemView.findViewById(R.id.layout);
+ /*
+
             row = new TableRow(context);
             row.addView(tv1);
             if(Arrays.asList(questionss).size()>1) {
-                row.addView(et1);
+               row.addView(et1);
             }
             row.addView(tv2);
             //row.setLayoutParams(params);
-            table.addView(row);
+           table.addView(row);
+          // row1.setLayoutParams(params);
             row1 = new TableRow(context);
-          //  row1.setLayoutParams(params);
 
             row1.addView(tv3);
             if(Arrays.asList(questionss).size()>4) {
                 row1.addView(et2);
             }
-            row1.addView(tv4);
+           row1.addView(tv4);
 
-            table.addView(row1);
+          table.addView(row1);
             row2 = new TableRow(context);
+
             row2.addView(tv5);
-            if(Arrays.asList(questionss).size()>7){
-                row2.addView(et3);
-            }
+         if(Arrays.asList(questionss).size()>7){
+               row2.addView(et3);
+           }
             row2.addView(tv6);
             table.addView(row2);
-
             row3 = new TableRow(context);
+
             row3.addView(tv7);
-            if(Arrays.asList(questionss).size()>10) {
+           if(Arrays.asList(questionss).size()>10) {
                 row3.addView(et4);
             }
             row3.addView(tv8);
             table.addView(row3);
+*/
+
+            table.addView(tr);
 
             answer = (Button) itemView.findViewById(R.id.answer);
 
