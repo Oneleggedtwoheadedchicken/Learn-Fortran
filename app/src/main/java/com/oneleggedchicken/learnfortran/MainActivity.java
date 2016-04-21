@@ -15,9 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
-import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.RelativeLayout;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -30,24 +28,13 @@ public class MainActivity extends AppCompatActivity
 
     String inviteText = "I'm learning Fortran on Learn Fortran application ! Checkout #FortranIsFun";
     String inviteTitle = "Share with friends";
-    RelativeLayout arrays,basics,loops;
+    FrameLayout arrays,basics,loops, morebasics,modules;
     loadXML x;
     ArrayList<Data> al;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        al = new ArrayList<>();
-        try {
-            x = new loadXML(getApplicationContext(),"questions.xml");
-            Log.d("data", x.dataArray.toString());
-            al=x.dataArray;
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (XmlPullParserException e) {
-            e.printStackTrace();
-        }
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -63,31 +50,143 @@ public class MainActivity extends AppCompatActivity
         // Load Compiler in The Background
         loadCompiler();
 
-        basics = (RelativeLayout) findViewById(R.id.Basics);
+        basics = (FrameLayout) findViewById(R.id.Basics);
         basics.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                al = new ArrayList<>();
+                try {
+                    x = new loadXML(getApplicationContext(), "basics.xml");
+                    Log.d("data", x.dataArray.toString());
+                    al=x.dataArray;
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (XmlPullParserException e) {
+                    e.printStackTrace();
+                }
+
+
                 Intent intent = new Intent(MainActivity.this, TableGrid.class);
+                intent.putExtra("data", al.get(0));
+                intent.putExtra("name","Basic Concepts");
+                startActivity(intent);
+
+            }
+        });
+
+        morebasics = (FrameLayout) findViewById(R.id.more_basics);
+        morebasics.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                al = new ArrayList<>();
+                try {
+                    x = new loadXML(getApplicationContext(), "more_basics.xml");
+                    Log.d("data", x.dataArray.toString());
+                    al=x.dataArray;
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (XmlPullParserException e) {
+                    e.printStackTrace();
+                }
+
+
+                Intent intent = new Intent(MainActivity.this,TableGrid.class);
+                intent.putExtra("name","More Basics");
                 intent.putExtra("data", al.get(0));
                 startActivity(intent);
 
             }
         });
 
-        arrays = (RelativeLayout) findViewById(R.id.Arrays);
+
+
+        arrays = (FrameLayout) findViewById(R.id.Arrays);
+
         arrays.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println(al);
+
+                al = new ArrayList<>();
+                try {
+                    x = new loadXML(getApplicationContext(), "arrays.xml");
+                    Log.d("data", x.dataArray.toString());
+                    al=x.dataArray;
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (XmlPullParserException e) {
+                    e.printStackTrace();
+                }
+
+
                 Intent intent = new Intent(MainActivity.this,TableGrid.class);
-                intent.putExtra("data", al.get(1));
+                intent.putExtra("data", al.get(0));
+                intent.putExtra("name","Arrays");
                 startActivity(intent);
 
             }
         });
 
-    }
+
+
+    loops = (FrameLayout) findViewById(R.id.Loops);
+
+    loops.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+
+            al = new ArrayList<>();
+            try {
+                x = new loadXML(getApplicationContext(), "loops.xml");
+                Log.d("data", x.dataArray.toString());
+                al=x.dataArray;
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (XmlPullParserException e) {
+                e.printStackTrace();
+            }
+
+
+            Intent intent = new Intent(MainActivity.this,TableGrid.class);
+            intent.putExtra("name","Conditionals and Loops");
+            intent.putExtra("data", al.get(0));
+            startActivity(intent);
+
+        }
+    });
+
+    modules = (FrameLayout) findViewById(R.id.modules);
+
+    modules.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+
+            al = new ArrayList<>();
+            try {
+                x = new loadXML(getApplicationContext(), "modules.xml");
+                Log.d("data", x.dataArray.toString());
+                al=x.dataArray;
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (XmlPullParserException e) {
+                e.printStackTrace();
+            }
+
+
+            Intent intent = new Intent(MainActivity.this,TableGrid.class);
+            intent.putExtra("name","Procedures & Modules");
+            intent.putExtra("data", al.get(0));
+            startActivity(intent);
+
+        }
+    });
+
+}
+
+
+
+
 
     @Override
     public void onBackPressed() {

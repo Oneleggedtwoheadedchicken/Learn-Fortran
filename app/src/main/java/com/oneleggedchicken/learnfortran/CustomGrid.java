@@ -106,7 +106,7 @@ public class CustomGrid extends BaseAdapter{
 
                     Intent intent = new Intent(context, ViewPagerMain.class);
                     intent.putExtra("headarray", d.getfifthquestionhead());
-                    intent.putExtra("questionarray", d.getfifthquestionhead());
+                    intent.putExtra("questionarray", d.getfifthquestiontext());
                     context.startActivity(intent);
                 }else if (position == 5) {
 

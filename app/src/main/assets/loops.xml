@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<questions>
+	<question>
+		<firstquestionhead>
+           LOOPS
+		</firstquestionhead>
+		<firstquestiontext>
+There may be a situation, when you need to execute a block of code several number of times. In general, statements are executed sequentially : The first statement in a function is executed first, followed by the second, and so on.
+Programming languages provide various control structures that allow for more complicated execution paths.
+A loop statement allows us to execute a statement or group of statements multiple times and following is the general form of a loop statement in most of the programming languages
+		</firstquestiontext>
+		<secondquestionhead>
+			IF Statement >>> What is the output of this program?
+integer :: a = 30
+if (a > 20 ) then
+write(*,*) "a is more than 30"
+end program >>> If  ... Else Statement >>> Complete
+		</secondquestionhead>
+
+		<secondquestiontext>
+An if… then statement consists of a logical expression followed by one or more statements and terminated by an end if statement.
+The basic syntax of an if… then statement is:
+if (logical expression) then
+statement
+end if >>> --- ERROR --- >>>The syntax of an if…else statement is:
+if (logical expression) then
+statement
+else
+statement
+end if>>>if (a > 20 ) ---then--- --- ---else--- (a= 20) --- ---end if---  >>>
+		</secondquestiontext>
+		<thirdquestionhead>
+			Do Loop >>> What is the output of this program?
+integer :: n,a=0
+do n = 11, 14
+a = a + n
+end do
+Write(*,*)a
+end program>>>Do While Loop >>> What is the output of this program?
+integer :: nfact = 1,n = 1
+do (n &lt;= 10)
+nfact = nfact * n
+n = n + 1
+Write(*,*)  n
+end program
+		</thirdquestionhead>
+		<thirdquestiontext>This construct enables a statement, or a series of statements, to be carried out iteratively, while a given condition is true.
+do var = start, stop [,step]
+! statement(s)
+…
+end do
+Example:
+
+integer :: n,nfact = 1
+do n = 1, 3
+nfact = nfact * n
+Write(*,*) n, " ", nfact
+end do
+output is:
+1             1
+2             2
+3             6 >>> ---50--- >>>
+Repeats a statement or group of statements while a given condition is true. It tests the condition before executing the loop body.
+do while (logical expr)
+statements
+end do >>> ---  ERROR  --- >>>
+
+		</thirdquestiontext>
+		<fourthquestionhead>
+			Nested Loops
+		</fourthquestionhead>
+		<fourthquestiontext>
+You can use one or more loop construct inside any another loop construct. You can also put labels on loops.
+Synatx :
+iloop: do i = 1, 3
+Write(*,*) "i: ", i
+jloop: do j = 1, 3
+Write(*,*) "j: ", j
+kloop: do k = 1, 3
+Write(*,*) "k: ", k
+end do kloop
+end do jloop
+end do iloop
+		</fourthquestiontext>
+		<fifthquestionhead>
+		</fifthquestionhead>
+		<fifthquestiontext>
+		</fifthquestiontext>
+		<sixthquestionhead>
+		</sixthquestionhead>
+		<sixthquestiontext>
+		</sixthquestiontext>
+		<seventhquestionhead>
+		</seventhquestionhead>
+		<seventhquestiontext>
+		</seventhquestiontext>
+		<gridtext>
+		Introduction to Loops >>> If-Then Construct >>> DO Loop >>> Nested Loops
+		</gridtext>
+		<gridsectext>
+			0 questions >>> 2 questions >>> 2 questions >>> 0 questions
+		</gridsectext>
+	</question>
+</questions>

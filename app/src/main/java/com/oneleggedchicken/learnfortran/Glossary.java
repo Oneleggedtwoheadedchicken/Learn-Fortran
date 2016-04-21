@@ -1,24 +1,30 @@
 package com.oneleggedchicken.learnfortran;
 
 
-import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 
-public class Glossary extends Activity {
+public class Glossary extends AppCompatActivity {
 
     ListView listView;
     String[] values;
     ArrayAdapter<String> adapter;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_view);
 
-         listView = (ListView) findViewById(R.id.list);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Glossary");
+
+        listView = (ListView) findViewById(R.id.list);
 
          values = getResources().getStringArray(R.array.glossary);
 

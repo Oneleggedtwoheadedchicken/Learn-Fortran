@@ -27,7 +27,7 @@
             android:layout_width="160dp"
             android:layout_height="wrap_content">
 
-            <RelativeLayout
+            <FrameLayout
 
                 android:background="@drawable/green_button"
                 android:layout_width="wrap_content"
@@ -40,12 +40,13 @@
 
                 >
                 <ImageView
+                    android:layout_gravity="center"
                     android:src="@drawable/coding"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"/>
-            </RelativeLayout>
+            </FrameLayout>
             <TextView
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
@@ -72,30 +73,31 @@
 
             >
 
-        <RelativeLayout
+        <FrameLayout
+
             android:background="@drawable/green_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/Loops"
+            android:id="@+id/more_basics"
+            android:layout_gravity="center">
+
+        <ImageView
             android:layout_gravity="center"
+            android:src="@drawable/format"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
 
 
-            >
-            <ImageView
-                android:src="@drawable/loop"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"/>
 
-        </RelativeLayout>
+        </FrameLayout>
             <TextView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
-                android:text="Conditionals
-and Loops"
+                android:text="More Basics"
                 android:layout_marginTop="5dp"
                 android:id="@+id/textView3"
                 android:layout_below="@+id/button2"
@@ -116,26 +118,33 @@ and Loops"
             android:layout_alignParentEnd="true">
 
 
-        <RelativeLayout
+        <FrameLayout
             android:background="@drawable/green_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/Arrays"
+            android:id="@+id/Loops"
             android:layout_gravity="center"
 
             >
+
             <ImageView
-            android:src="@drawable/arrays"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"/>
-        </RelativeLayout>
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:src="@drawable/loop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+
+
+        </FrameLayout>
             <TextView
+                android:gravity="center"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Arrays"
+                android:text="Conditionals
+and Loops"
                 android:textSize="20dp"
                 android:layout_marginTop="5dp"
                 android:id="@+id/textView4"
@@ -154,26 +163,30 @@ and Loops"
             android:layout_alignParentStart="true"
 
             android:layout_marginTop="67dp">
-        <RelativeLayout
+        <FrameLayout
             android:layout_gravity="center"
             android:background="@drawable/green_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/modules"
+            android:id="@+id/Arrays"
             >
+
             <ImageView
-                android:src="@drawable/modules"
+                android:layout_gravity="center"
+                android:src="@drawable/arrays"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"/>
-        </RelativeLayout>
+
+
+        </FrameLayout>
 
             <TextView
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Modules"
+                android:text="Arrays"
                 android:textSize="20dp"
                 android:layout_marginTop="5dp"
                 android:id="@+id/textView5"
@@ -190,24 +203,30 @@ and Loops"
             android:layout_alignTop="@+id/btn4"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true">
-        <RelativeLayout
+        <FrameLayout
             android:background="@drawable/green_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button5"
+            android:id="@+id/modules"
             android:layout_gravity="center">
+
             <ImageView
-                android:src="@drawable/format"
-                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/modules"
+                android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"/>
-        </RelativeLayout>
+
+
+
+        </FrameLayout>
             <TextView
+                android:gravity="center"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Format"
+                android:text="Procedures &amp; Modules"
                 android:textSize="20dp"
                 android:layout_marginTop="5dp"
                 android:id="@+id/textView7"
@@ -215,7 +234,7 @@ and Loops"
 
                 />
         </LinearLayout>
-        <LinearLayout
+        <FrameLayout
             android:id="@+id/btn6"
             android:orientation="vertical"
             android:layout_width="wrap_content"
@@ -223,22 +242,25 @@ and Loops"
             android:layout_below="@id/btn5"
             android:layout_marginTop="67dp"
             android:layout_centerHorizontal="true">
-        <RelativeLayout
+        <FrameLayout
             android:background="@drawable/color_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button6"
              >
             <ImageView
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:src="@drawable/test"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"/>
 
-        </RelativeLayout>
+        </FrameLayout>
             <TextView
                 android:layout_gravity="center"
+                android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Test"
@@ -248,7 +270,7 @@ and Loops"
                 android:layout_below="@+id/button6"
 
                 />
-        </LinearLayout>
+        </FrameLayout>
 
 
 

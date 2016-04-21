@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<questions>
+	<question>
+		<firstquestionhead>
+			Introduction To Procedures >>> What are the two types of procedures?>>> Functions >>> Complete>>> Result Option >>> What is used to store the returned value of a function in some other name than the function name? >>> Subroutines >>> Complete >>> Calling a Subroutine
+		</firstquestionhead>
+		<firstquestiontext>
+A procedure is a group of statements that perform a well-defined task and can be invoked from your program. Information (or data) is passed to the calling program, to the procedure as arguments.
+There are two types of procedures:
+Functions
+Subroutines>>> ---Functions and Subroutines--- >>>A function is a procedure that returns a single quantity. A function should not modify its arguments.
+The returned quantity is known as function value, and it is denoted by the function name.
+Syntax:
+function name(arg1, arg2, ....)
+[declarations, including those for the arguments]
+[executable statements]
+end function [name] >>> ---function--- name(arg1, arg2, ....)--- ---end--- function [name] >>> If you want the returned value to be stored in some other name than the function name, you can use the result option.
+You can specify the return variable name as:
+function name(arg1, arg2, ....) result (return_var_name)
+[declarations, including those for the arguments]
+[executable statements]
+end function [name] >>> --- result --- >>> A subroutine does not return a value, however it can modify its arguments.
+Syntax:
+subroutine name(arg1, arg2, ....)
+[declarations, including those for the arguments]
+[executable statements]
+end subroutine [name] >>> ---function--- name(arg1, arg2, ....)--- end function >>>You need to invoke a subroutine using the call statement.
+The following example demonstrates the definition and use of a subroutine swap, that changes the values of its arguments.
+Example:
+real :: a = 2.0, b = 3.0
+Write(*,*) "Before calling swap", "a = ", a, "b = ", b
+call swap(a, b)
+Write(*,*) "After calling swap", "a = ", a, "b = ", b
+end program
+
+subroutine swap(x, y)
+real :: x, y, temp
+temp = x
+x = y
+y = temp
+end subroutine swap
+OutPut is .. Before calling swap ,a = 2.00000000 , b = 3.00000000
+After calling swap , a = 3.00000000 ,b = 2.00000000
+		</firstquestiontext>
+		<secondquestionhead>
+			Introduction To Modules>>> Modules are used to simplify the program? (Write Wrong or Right) >>> Modules are used for >>> Modules can make data used by more than one routine? (Write Wrong or Right)
+		</secondquestionhead>
+		<secondquestiontext>
+A module is like a package where you can keep your functions and subroutines, in case you are writing a very big program, or your functions or subroutines can be used in more than one program.
+Modules provide you a way of splitting your programs between multiple files. >>> ---Right--- >>>
+Packaging subprograms, data and interface blocks.
+Defining global data that can be used by more than one routine.
+Declaring variables that can be made available within any routines you choose.
+Importing a module entirely, for use, into another program or subroutine.>>> ---Right--- >>>
+		</secondquestiontext>
+		<thirdquestionhead>
+			Syntax of Module >>> Complete >>> Using a Module into your Program >>> What is the statement that allows you to incorporate a module in a program?
+		</thirdquestionhead>
+		<thirdquestiontext>
+A module consists of two parts:
+a specification part for statements declaration
+a contains part for subroutine and function definitions
+The general form of a module is:
+module name
+[statement declarations]
+[contains [subroutine and function definitions] ]
+end module [name] >>> ---Module--- name --- end module >>>
+You can incorporate a module in a program or subroutine by the use statement: (use name)>>> ---use name--- >>>
+		</thirdquestiontext>
+		<fourthquestionhead>
+ Notes >>> The use statement can only appear in the main program? (Write Wrong or Right) >>>Example
+
+		</fourthquestionhead>
+		<fourthquestiontext>
+Please note that
+You can add as many modules as needed, each will be in separate files and compiled separately.
+A module can be used in various different programs.
+A module can be used many times in the same program.
+The variables declared in a module specification part, are global to the module.
+The variables declared in a module become global variables in any program or routine where the module is used.
+The use statement can appear in the main program, or any other subroutine or module which uses the routines or variables declared in a particular module.
+>>> ---Wrong --- >>>module constants
+real, parameter :: pi = 3.1415926536 ,e = 2.7182818285
+contains
+subroutine show_consts()
+Write(*,*), "Pi = ", pi , "e = ", e
+end subroutine show_consts
+end module constants
+
+program module_example
+use constants
+real :: x = 2.0, ePowerx, area, radius = 7.0
+ePowerx = e ** x
+area = pi * radius**2
+call show_consts()
+Write(*,*), "e raised to the power of 2.0 = ", ePowerx
+Write(*,*), "Area of a circle with radius 7.0 = ", area
+end program module_example
+		</fourthquestiontext>
+
+		<fifthquestionhead>
+		</fifthquestionhead>
+		<fifthquestiontext>
+		</fifthquestiontext>
+		<sixthquestionhead>
+		</sixthquestionhead>
+		<sixthquestiontext>
+		</sixthquestiontext>
+		<seventhquestionhead>
+		</seventhquestionhead>
+		<seventhquestiontext>
+		</seventhquestiontext>
+		<gridtext>
+			Procedures >>> Introduction To Modules >>> Syntax And Use >>> Notes and example
+		</gridtext>
+		<gridsectext>
+			3 questions >>> 2 questions >>>2 questions >>> 2 questions
+		</gridsectext>
+	</question>
+</questions>

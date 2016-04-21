@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<questions>
+<question>
+    <firstquestionhead>
+        Mathematical Functions >>> IF INTEGER :: x = 4 >>> Conversion Functions >>> Assume x = 7.8 and y = -8.8 >>> Other functions
+    </firstquestionhead>
+    <firstquestiontext>COS (X) --> cosine of X radian.
+SIN (X) --> sine of X radian
+TAN (X) --> tangent of X radian
+ACOS (X) --> the inverse cosine (in radian)
+ASIN (X) --> the inverse sine (in radian)
+ATAN (X) -->  the inverse tangent in radian
+EXP (X) --> exponential e^x
+SQRT (X) --> square root of X
+LOG (X) --> the natural logarithm of X
+LOG10 (X) --> the common logarithmic of X (base 10)>>>sqrt(x) = ---ERROR---  >>>
+INT(x) --> truncate to integer partx --> INT(-3.5) = -3
+NINT(x) --> round nearest integer to x --> NINT(3.5) = 4
+FLOOR(x) --> greatest integer less than or equal to x --> FLOOR(-3.5) = -4
+FRACTION(x) --> the fractional part of x --> FRACTION(12.3)= 0.3
+REAL(x) --> convert x to REAL --> REAL(-10) = 10.0
+ >>> FLOOR(x)= ---7--- ---FRACTION(x)= ---.8--- ---FLOOR(y)= --- -9 --- >>>
+ MAX(x1, x2, ..., xn) --> maximum of x1, x2, ... xn
+ MIN(x1 x2  xn) --> minimum of x1, x2, ... xn
+ </firstquestiontext>
+    <secondquestionhead>
+        List-Directed (READ) >>> Complete to read I,J,K from user's input
+    </secondquestionhead>
+    <secondquestiontext>
+Fortran uses the READ(*,*)statement read data into variables from keyboard:
+READ(*,*)always starts with a new line
+Example:
+READ(*,*) v1 v2  vn READ(,) v1,v2, …,vn
+CHARACTER(LEN=5) :: Name
+REAL :: height, count
+READ(*,*) Name,height,count
+         Smith  100.0   25
+READ(*,*) I, J, K
+100,300,400, 500  !here I = 100 .. J = 300 .. K = 400 and 500 will be ignore >>> ---READ(*,*)--- I,J,K >>>
+    </secondquestiontext>
+    <thirdquestionhead>
+List-Directed WRITE >>> What is the output of this program
+CHARACTER:: Name = "Smith"
+Write(*,*) Name
+End program
+    </thirdquestionhead>
+    <thirdquestiontext>
+Fortran uses the WRITE(*,*)statement to write information to screen.
+-WRITE(*,*)always starts with a new line!
+Example:
+REAL :: x=5.
+WRITE(*,*) x
+End program
+here output is 5. >>> ---S--- >>>
+    </thirdquestiontext>
+    <fourthquestionhead>
+     Your first Fortran program >>>
+    </fourthquestionhead>
+    <fourthquestiontext>
+Program hello-world
+WRITE(*,*) "Hello World"
+END program
+    </fourthquestiontext>
+    <fifthquestionhead>
+    </fifthquestionhead>
+    <fifthquestiontext>
+    </fifthquestiontext>
+    <sixthquestionhead>
+    </sixthquestionhead>
+    <sixthquestiontext>
+    </sixthquestiontext>
+    <seventhquestionhead>
+    </seventhquestionhead>
+    <seventhquestiontext>
+    </seventhquestiontext>
+    <gridtext>
+        Fortran Intrinsic Functions >>> Getting User Input >>> WRITE(*,*) >>> A Hello World Program
+    </gridtext>
+    <gridsectext>
+       2 questions >>> 1 question >>> 1 question >>> 0 question
+    </gridsectext>
+</question>
+</questions>

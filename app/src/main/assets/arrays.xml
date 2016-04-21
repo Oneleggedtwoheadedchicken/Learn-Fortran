@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<questions>
+	<question>
+		<firstquestionhead>
+      Declaring Arrays 1/2>>> Complete >>> Declaring Arrays 2/2 >>> Complete to create 3X3 two-dimensional array
+		</firstquestionhead>
+		<firstquestiontext>
+Arrays can store a fixed-size sequential collection of elements of the same type. An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type.
+
+Arrays are declared with the dimension attribute.
+For example, to declare a one-dimensional array named number, of real numbers containing 5 elements, you write,
+real, dimension(5) :: numbers >>> integer,---dimension---(3) :: matrix >>>The individual elements of arrays are referenced by specifying their subscripts. The first element of an array has a subscript of one. The array numbers contains five real variables –numbers(1), numbers(2), numbers(3), numbers(4), and numbers(5).
+To create a 5 x 5 two-dimensional array of integers named num, you write: integer, dimension (5,5) :: num >>> integer, ---dimension (3,3)--- :: num
+		</firstquestiontext>
+		<secondquestionhead>
+			Assigning Values >>> You can not assign values to an array using a do loop (write Right or Wrong)
+		</secondquestionhead>
+		<secondquestiontext>
+You can either assign values to individual members, like,
+numbers(1) = 2.0
+or, you can use a loop,
+do i=1,5
+numbers(i) = i * 2.0
+end do
+One dimensional array elements can be directly assigned values using a short hand symbol, called array constructor, like,
+numbers = (/1.5, 3.2,4.5,0.9,7.2 /)
+((((((please note that there are no spaces allowed between the brackets ‘( ‘and the back slash ‘/’)))))
+>>> --- Wrong --- >>>
+
+		</secondquestiontext>
+		<thirdquestionhead>
+         Dynamic Array >>> What is the functions used to declare a dynamic array?
+		</thirdquestionhead>
+		<thirdquestiontext>A dynamic array is an array, the size of which is not known at compile time, but will be known at execution time. Dynamic arrays are declared with the attribute allocatable.
+Example:real, dimension (:,:), allocatable :: darray
+After the array is used, in the program, the memory created should be freed using the deallocate function "deallocate (darray)"
+Example: real, dimension (:,:), allocatable :: darray
+integer :: s1, s2 ,i,j
+Read(*,*) s1, s2
+allocate ( darray(s1,s2) )
+do i = 1, s1
+darray(i,j) = i*j
+do i = 1, s1
+do j = 1, s2
+darray(i,j) = i*j
+print*, "darray(",i,",",j,") = ", darray(i,j)
+end do
+end do
+deallocate (darray)>>> ---allocate--->>>
+		</thirdquestiontext>
+		<fourthquestionhead>
+		</fourthquestionhead>
+		<fourthquestiontext>
+		</fourthquestiontext>
+		<fifthquestionhead>
+		</fifthquestionhead>
+		<fifthquestiontext>
+		</fifthquestiontext>
+		<sixthquestionhead>
+		</sixthquestionhead>
+		<sixthquestiontext>
+		</sixthquestiontext>
+		<seventhquestionhead>
+		</seventhquestionhead>
+		<seventhquestiontext>
+		</seventhquestiontext>
+		<gridtext>
+	Declaring Array , Assigning Values >>> Dynamic Array
+		</gridtext>
+		<gridsectext>
+			2 questions >>> 1 question
+		</gridsectext>
+	</question>
+</questions>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<questions>
+	<question>
+	<firstquestionhead>
+		Fortran Program Structure >>>Complete>>>Source Code Extension>>>Write the extension of Fortran 77 source code file
+	</firstquestionhead>
+		<firstquestiontext>
+
+A Fortran  program has the following form:
+-program-name is the name of that program
+-specification-partexecution-partand , specificationpart , executionpart ,
+subprogram-partare and IMPLICIT NONE optional.
+-end program
+
+-Comments start with a!
+-Everything following !will be ignored
+-This is similar to//in C/C++
+>>>---PROGRAM---program-name---
+---!---this is a comment line---
+---END PROGRAM--- program-name---
+
+>>>
+-The extensions .f90, .f95, and .f03 are used for modern, free-form source code conforming to the Fortran 90, Fortran 95, and Fortran 2003 standards.
+-Fortran 77 source code files have .f or .for extension
+>>> . ---    f    ---  >>>
+
+		</firstquestiontext>
+		<secondquestionhead>
+			Continuation Lines >>>What is the continuation character>>> Alphabets >>> Fortran alphabets include special characters and space (Write wrong or right);
+		</secondquestionhead>
+		<secondquestiontext>
+Fortran is not completely format free!
+-A statement must starts with a new line.
+-If a statement is too long to fit on one line it has to be continued.
+-The continuation character is &amp;, which is not part of the statement.
+
+-Total = Total + &amp;
+Amount * Payments
+! Total = Total + Amount*Payments
+PROGRAM  &amp;
+ContinuationLine
+! PROGRAM ContinuationLine
+>>>---   &amp;  --- >>>
+Fortran alphabets include the following:
+-Upper and lower cases letters
+-Digits
+-Special characters
+
+space
+' "
+( ) * + - /: =
+_ ! &amp; $ ;
+% ? , .
+>>> ---   Right   ---     >>>
+
+
+		</secondquestiontext>
+		<thirdquestionhead>
+Constants>>>Complete>>>Logical Constant>>>(FALSE.) is logical constant (Write wrong or right)>>>Character>>>Complete
+		</thirdquestionhead>
+		<thirdquestiontext>
+A Fortran constant may be an integer, real,logical,complex and character.
+An integer constant is a string of digits: 12345 345+789+0
+A real constant has two forms,decimal and and exponential:
+-In the decimal form a real constant is a string of digits with exactly one decimal point.
+In the exponential form a real constant starts with an integer/real, followed by a E/e, followed by an integer (ie the exponent)
+Example : 2.45, .13,-0.12, 0.12, .12, 12E3, 3.45E-8
+>>>3.5 is a/an ---REAL--- constant---2E4 is a/an ---REAL---constant---
+>>>
+A logical constant is either .TRUE.or .FALSE.
+-Note that the periods surrounding TRUE and FALSE are required!
+>>> ---   Wrong   --- >>>
+A character string or character constant is  a string of characters enclosed between two double quotes or two single quotes.
+Examples: “abc”, ‘John Dow’, “#$%^”, and ‘()()’.
+-The length of a string is the number of number of characters between the quotes. The length of‘John Dow’is 8, space included.
+-A string has length zero is an empty string.
+-If single (or double) quotes are used in a string, then use double (or single) quotes as delimiters.
+Examples: “Adam’s cat”and ‘I said “go away”’.
+>>>A string has 0 length is an ---empty--- string---
+		</thirdquestiontext>
+		<fourthquestionhead>
+			Declarations:1/2 >>>Complete>>> Declarations:2/2 >>> Complete>>>The PARAMETER Attribute >>> Complete
+		</fourthquestionhead>
+
+		<fourthquestiontext>
+
+Fortran uses the following for variable declarations, where type-specifieris one of the following keywords: INTEGER, REAL, LOGICAL, COMPLEX and CHARACTER, and list is a sequence of identifiers separated by commas.
+type-specifier :: list
+			>>>
+---INTEGER---:: y = 5---
+---REAL---:: x = 20.---
+---LOGICAL---:: ok = .TRUE.---
+		>>>
+Character variables require additional information, the string length:
+-Keyword CHARACTER must be followed by a length attribute (LEN = l), where "l" is the length of the string the length of the string.
+-The LEN=part is optional.
+-If the length of a string is 1, one may use CHARACTER without length attribute.
+>>>character(---LEN---=20)::Answer,Quote---character :: K
+!variable K can only hold---ONE---
+character>>>
+A PARAMETE Ridentifier is a name whose value cannot be modified. In other words, it is a named constant. named constant.
+The PARAMETER attribute is used after the type keyword .. each identifier is followed by a =and followed by a value for that identifier.
+>>> REAL, ---PARAMETER--- :: PI = 3.14, E = 2.17 --- >>>
+		</fourthquestiontext>
+		<fifthquestionhead>
+			Arithmetic Operators >>>Complete>>>Relational Operators >>> Complete >>> Logical Operator >>> Assume X= .FALSE. and Y=.TRUE.
+
+		</fifthquestionhead>
+		<fifthquestiontext>
+Assume variable A = 5 and B = 3 then:
+(+) --> Addition Operator, adds two operands.--> A + B will give 8
+(-) --> Subtraction Operator, subtracts second operand from the first.--> A - B will give 2
+(*) --> Multiplication Operator, multiplies both operands.--> A * B will give 15
+(/) --> Division Operator, divides numerator by de-numerator. --> A / B will give 1
+(**) --> Exponentiation Operator, raises one operand to the power of the other. --> A ** B will give 125
+>>>INTEGER:: num=2**1-2 ...num= ---0--- >>>Assume A = 10 and B = 20,then:
+(==) --> Checks if the values of two operands are equal --> (A == B) is false.
+(/=) --> Checks if the values of two operands are not equal --> (A /= B) is true.
+(&gt;) --> Checks if the left operand is greater than the right operand --> (A > B) is false.
+(&lt;) --> Checks if the left operand is less than the right operand --> (A &lt; B ) is true.
+(&gt;=) --> Checks if the left operand is greater than or equal to right operand --> (A &gt;= B) is false.
+(&lt;=) --> Checks if theleft operand is less than or equal to the right operand --> (A &lt;= B) is true.>>>
+Assume X=4, Y=6 ...X/=Y is ---True ---
+--- X=>Y is ---False--- --- X&lt;Y is ---TRUE--- >>>
+Assume variable A holds .true. and variable B holds .false.
+(.and.) --> If both the operands are non-zero, then condition becomes true. --> (A .and. B) is .false.
+(.or.) --> If any of the two operands is non-zero, then condition becomes true. --> (A .or. B) is .true.
+(.not.) --> Use to reverses the logical state of its operand. If a condition is true then Logical NOT operator will make false. --> !(A .not. B) is .false.
+(.eqv.) --> Used to check equivalence of two logical values. --> (A .eqv. B) is .false.
+(.neqv.) --> Used to check non-equivalence of two logical values. --> (A .neqv. B) is .true.
+			>>> X .and. Y = ---.FALSE.--- ---X .neqv. Y = --- .TRUE. --- ---X .not. Y = ---.FALSE. ---
+		</fifthquestiontext>
+		<sixthquestionhead>
+
+		</sixthquestionhead>
+		<sixthquestiontext>
+		</sixthquestiontext>
+		<seventhquestionhead>
+		</seventhquestionhead>
+		<seventhquestiontext>
+		</seventhquestiontext>
+
+		<gridtext>
+			Program Structure>>>Continuation Lines &amp; Alphabets>>>Constants>>>Declarations &amp; (PARAMETER) Attribute>>>Arithmetic,Relational and Logical Operators
+		</gridtext>
+		<gridsectext>
+			2 questions >>>2 questions >>>3 questions >>>3 questions >>>3 questions
+		</gridsectext>
+	</question>
+
+</questions>

@@ -11,33 +11,45 @@
         android:layout_height="?attr/actionBarSize"
         android:background="#8BC34A"
         >
-    <LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_alignParentLeft="true"
-    android:layout_centerVertical="true">
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Time:"
-            android:id="@+id/text"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|left"
+            android:layout_alignTop="@+id/linearLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Time:"
+                android:id="@+id/text"
 
-            android:paddingLeft="10dp"
-            />
+                android:paddingLeft="10dp"
+                />
 
-        <Chronometer
-            android:id="@+id/time"
-            android:textAppearance="?android:attr/textAppearanceSmall"
+            <Chronometer
+                android:id="@+id/time"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Chronometer" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical|right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="Chronometer" />
-
-
-
-    </LinearLayout>
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/linearLayout">
 
         <TextView
             android:layout_width="wrap_content"
@@ -45,46 +57,308 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Small Text"
             android:id="@+id/attemps"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
+
             android:paddingRight="10dp"
-            />
+            /> </LinearLayout>
     </RelativeLayout>
 
     <TextView
         android:layout_below="@+id/toolbar"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:id="@+id/questionhead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif "
-        android:gravity="center"
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#000000"
-        android:textSize="23sp"
+        android:textSize="15sp"
+        android:gravity="center"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
 
         />
 
-    <TableLayout
+    <LinearLayout
+        android:gravity="center"
+        android:layout_below="@+id/questionhead"
+        android:layout_above="@+id/show"
+        android:orientation="vertical"
         android:id="@+id/layout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:gravity="center"
         android:layout_gravity="center"
 
         >
 
+        <RelativeLayout
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tr"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-    </TableLayout>
+            <LinearLayout
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fftext"
+                >
+                <TextView
+                    android:gravity="center"
+                    android:paddingTop="17dp"
+                    android:id="@+id/ftext"
+                    android:textSize="17sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cassac
+cascasascsa"
+                    />
+            </LinearLayout>
 
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/fftext"
+                android:layout_toEndOf="@+id/fftext"
+                android:layout_alignBottom="@+id/sstext"
+                android:id="@+id/editttext"
+                >
+
+            <EditText android:id="@+id/edittext"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+               /></LinearLayout>
+
+            <LinearLayout
+                android:gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/editttext"
+                android:layout_toEndOf="@+id/editttext"
+                android:id="@+id/sstext"
+
+                >
+            <TextView android:id="@+id/stext"
+                android:text="cassac
+cascasascsa"
+                android:paddingTop="17dp"
+                android:textSize="17sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+              />
+</LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/tr"
+            android:orientation="horizontal"
+            android:id="@+id/tr1"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ff1text"
+                >
+                <TextView
+                    android:gravity="center"
+                    android:paddingTop="17dp"
+                    android:id="@+id/f1text"
+                    android:textSize="17sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ff1text"
+                android:layout_toEndOf="@+id/ff1text"
+                android:layout_alignBottom="@+id/ss1text"
+                android:id="@+id/editt1text"
+                >
+
+                <EditText android:id="@+id/edit1text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    /></LinearLayout>
+
+            <LinearLayout
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/editt1text"
+                android:layout_toEndOf="@+id/editt1text"
+                android:id="@+id/ss1text"
+                >
+                <TextView android:id="@+id/s1text"
+                    android:paddingTop="17dp"
+                    android:textSize="17sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_below="@+id/tr1"
+            android:id="@+id/tr2"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ff2text"
+                >
+                <TextView
+                    android:gravity="center"
+                    android:paddingTop="17dp"
+                    android:id="@+id/f2text"
+                    android:textSize="17sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ff2text"
+                android:layout_toEndOf="@+id/ff2text"
+                android:layout_alignBottom="@+id/ss2text"
+                android:id="@+id/editt2text"
+                >
+
+                <EditText android:id="@+id/edit2text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    /></LinearLayout>
+
+            <LinearLayout
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/editt2text"
+                android:layout_toEndOf="@+id/editt2text"
+                android:id="@+id/ss2text"
+                >
+                <TextView android:id="@+id/s2text"
+                    android:paddingTop="17dp"
+                    android:textSize="17sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_below="@+id/tr2"
+            android:id="@+id/tr3"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ff3text"
+                >
+                <TextView
+                    android:gravity="center"
+                    android:paddingTop="17dp"
+                    android:id="@+id/f3text"
+                    android:textSize="17sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ff3text"
+                android:layout_toEndOf="@+id/ff3text"
+                android:layout_alignBottom="@+id/ss3text"
+                android:id="@+id/editt3text"
+                >
+
+                <EditText android:id="@+id/edit3text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    /></LinearLayout>
+
+            <LinearLayout
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/editt3text"
+                android:layout_toEndOf="@+id/editt3text"
+                android:id="@+id/ss3text"
+                >
+                <TextView android:id="@+id/s3text"
+                    android:paddingTop="17dp"
+                    android:textSize="17sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical|left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
 
     <Button
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
         android:background="#8BC34A"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -93,7 +367,28 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_margin= "10dp"/>
+        android:layout_margin= "10dp"/> </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|right"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    <Button
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:background="#8BC34A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show answer"
+        android:id="@+id/answer"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin= "10dp"/> </LinearLayout>
 
 
 
