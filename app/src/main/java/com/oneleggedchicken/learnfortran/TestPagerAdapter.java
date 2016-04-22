@@ -203,6 +203,7 @@ public class TestPagerAdapter extends PagerAdapter {
             intent.putExtra("percentage", String.valueOf(percentage));
             intent.putExtra("answer",(answer).toString().replaceAll("\\[|\\]", "").replaceAll(",", System.lineSeparator()));
             context.startActivity(intent);
+            ((Activity) context).finish();
 
 
         } else {
