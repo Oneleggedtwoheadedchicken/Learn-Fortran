@@ -116,10 +116,7 @@
                     android:id="@+id/ftext"
                     android:textSize="17sp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="cassac
-cascasascsa"
-                    />
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
 
@@ -150,8 +147,6 @@ cascasascsa"
 
                 >
             <TextView android:id="@+id/stext"
-                android:text="cassac
-cascasascsa"
                 android:paddingTop="17dp"
                 android:textSize="17sp"
                 android:layout_width="wrap_content"

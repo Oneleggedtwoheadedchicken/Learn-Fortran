@@ -2,6 +2,7 @@ package com.oneleggedchicken.learnfortran;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -22,19 +23,28 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.lang.*;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     String inviteText = "I'm learning Fortran on Learn Fortran application ! Checkout #FortranIsFun";
     String inviteTitle = "Share with friends";
-    FrameLayout arrays,basics,loops, morebasics,modules;
+    FrameLayout arrays,basics,loops, morebasics,modules,test;
     loadXML x;
     ArrayList<Data> al;
+    Locale locale;
+    Configuration config;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        locale = new Locale("en_US");
+        Locale.setDefault(locale);
+        config = new Configuration();
+        config.locale = locale;
+        this.getApplicationContext().getResources().updateConfiguration(config, null);
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -181,8 +191,20 @@ public class MainActivity extends AppCompatActivity
 
         }
     });
+        test = (FrameLayout) findViewById(R.id.Test);
+        test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-}
+
+                Intent intent = new Intent(MainActivity.this,TestPagerMain.class);
+                startActivity(intent);
+
+            }
+        });
+
+
+    }
 
 
 

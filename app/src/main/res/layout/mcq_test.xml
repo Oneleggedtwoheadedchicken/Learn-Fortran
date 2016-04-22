@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE">
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView"
+        android:fillViewport="true"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:gravity="top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+              <TextView
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="In a FORTRAN program I have set x=2.0, a=2.0 and b=4.0. What is the value of y if: y = a*x+b**2/x ?"
+                android:gravity="center"
+                />
+
+            <RadioGroup
+                android:background="@drawable/mcq_shape"
+                android:layout_width="match_parent"
+                android:layout_margin="20dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A. 8.0"
+                    android:id="@+id/FRB1"
+                    android:layout_gravity="left" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B. 12.0"
+                    android:id="@+id/SRB1"
+                    android:layout_gravity="left" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C. 16.0"
+                    android:id="@+id/THRB1"
+                    android:layout_gravity="left" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D. 64.0"
+                    android:id="@+id/FORB1"
+                    android:layout_gravity="left" />
+
+
+            </RadioGroup>
+
+              <TextView
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Which of the following is not a valid property of a PARAMETER statement? "
+                android:gravity="center"
+                />
+
+            <RadioGroup
+                android:background="@drawable/mcq_shape"
+                android:layout_width="match_parent"
+                android:layout_margin="20dp"
+                android:layout_height="150dp"
+                android:gravity="left"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A. Can combine other parameters with FORTRAN arithmetic operators to compute the value of a new parameter"
+                    android:id="@+id/FRB2"
+                    android:layout_gravity="left" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B. Parameters can be set anywhere in a program"
+                    android:id="@+id/SR2"
+                    android:layout_gravity="left" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C. Integer parameters can be used to set array dimensions"
+                    android:id="@+id/THRB2"
+                    android:layout_gravity="left" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D. Parameters can be used as bounds on do loops.
+"
+                    android:id="@+id/FORB2"
+                    android:layout_gravity="left" />
+
+
+            </RadioGroup>
+
+              <TextView
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="In a FORTRAN program x=1.0, y=2.0 and w=3.0. What is the value of z if: z=2.0(x(y+3.0)+w)"
+                android:gravity="center"
+            />
+
+            <RadioGroup
+                android:background="@drawable/mcq_shape"
+                android:layout_width="match_parent"
+                android:layout_margin="20dp"
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A. 12.0"
+                    android:id="@+id/FRB3"
+                    android:layout_gravity="left" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B. 16.0"
+                    android:id="@+id/SRB3"
+                    android:layout_gravity="left" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C. 18.0"
+                    android:id="@+id/THRB3"
+                    android:layout_gravity="left" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D. not determined due to a FORTRAN syntax error"
+                    android:id="@+id/FORB3"
+                    android:layout_gravity="left" />
+
+
+            </RadioGroup>
+
+              <TextView
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="After compiling the FORTRAN statement: y = c/d + a*x**2-5 Which operation is performed first by the computer?"
+                android:gravity="center"
+                />
+
+            <RadioGroup
+                android:background="@drawable/mcq_shape"
+                android:layout_width="match_parent"
+                android:layout_margin="20dp"
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A. /"
+                    android:id="@+id/FRB4"
+                    android:layout_gravity="left" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B. +"
+                    android:id="@+id/SRB4"
+                    android:layout_gravity="left" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C. *"
+                    android:id="@+id/THRB4"
+                    android:layout_gravity="left" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D. **"
+                    android:id="@+id/FORB4"
+                    android:layout_gravity="left" />
+
+
+            </RadioGroup>
+
+              <TextView
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Which of the following is an “executable” statement (takes an action when “a.out” is executed)?"
+                android:gravity="center"
+                />
+
+            <RadioGroup
+                android:background="@drawable/mcq_shape"
+                android:layout_width="match_parent"
+                android:layout_margin="20dp"
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A. ALLOCATE"
+                    android:id="@+id/FRB5"
+                    android:layout_gravity="left" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B. DIMENSION"
+                    android:id="@+id/SRB5"
+                    android:layout_gravity="left" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C. EXTERNAL"
+                    android:id="@+id/THRB5"
+                    android:layout_gravity="left" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D. PARAMETER"
+                    android:id="@+id/FORB5"
+                    android:layout_gravity="left" />
+
+
+            </RadioGroup>
+
+              <TextView
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text=" Which of the following Fortran constants has the value of 5000.0?"
+                android:gravity="center"
+                />
+
+            <RadioGroup
+                android:background="@drawable/mcq_shape"
+                android:layout_width="match_parent"
+                android:layout_margin="20dp"
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A)0.5E-4"
+                    android:id="@+id/FRB6"
+                    android:layout_gravity="left" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B) 5.0E4"
+                    android:id="@+id/SRB6"
+                    android:layout_gravity="left" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C)5.0E-3"
+                    android:id="@+id/THRB6"
+                    android:layout_gravity="left" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D) 5.0E3"
+                    android:id="@+id/FORB6"
+                    android:layout_gravity="left" />
+
+
+            </RadioGroup>
+
+            <RelativeLayout
+                android:gravity="center_vertical|right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true">
+
+                <Button
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="#8BC34A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Continue"
+                    android:id="@+id/check"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"/> </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

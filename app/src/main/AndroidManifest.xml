@@ -25,6 +25,8 @@
         <activity android:name=".Glossary"/>
         <activity android:name=".TableGrid"/>
         <activity android:name=".ViewPagerMain"/>
+        <activity android:name=".TestPagerMain"/>
+
 
     </application>
 

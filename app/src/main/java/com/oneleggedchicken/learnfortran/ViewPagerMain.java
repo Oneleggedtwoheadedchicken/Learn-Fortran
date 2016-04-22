@@ -31,9 +31,6 @@ public class ViewPagerMain extends Activity {
         setContentView(R.layout.viewpager_main);
         headarray = getIntent().getStringArrayExtra("headarray");
         questionarray = getIntent().getStringArrayExtra("questionarray");
-       /* toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle();*/
         viewPager = (ViewPager) findViewById(R.id.pager);
         adapter = new ViewPagerAdapter(ViewPagerMain.this, headarray,questionarray);
         viewPager.setAdapter(adapter);
