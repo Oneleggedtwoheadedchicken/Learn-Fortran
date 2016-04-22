@@ -27,6 +27,9 @@
         <activity android:name=".ViewPagerMain"/>
         <activity android:name=".TestPagerMain"/>
 
+        <activity
+            android:name=".Dialog"
+            android:theme="@style/DialogSlideAnim" />
 
     </application>
 

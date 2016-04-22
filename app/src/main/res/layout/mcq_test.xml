@@ -65,6 +65,7 @@
                     android:layout_height="wrap_content"
                     android:text="D. 64.0"
                     android:id="@+id/FORB1"
+                    android:padding="10dp"
                     android:layout_gravity="left" />
 
 

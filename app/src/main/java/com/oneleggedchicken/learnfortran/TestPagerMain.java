@@ -11,7 +11,7 @@ public class TestPagerMain extends AppCompatActivity {
 
     public static ViewPager viewPager;
     TestPagerAdapter adapter;
-    Chronometer time;
+    public static Chronometer time;
     Toolbar toolbar;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,6 @@ public class TestPagerMain extends AppCompatActivity {
         viewPager = (ViewPager) findViewById(R.id.pager);
         adapter = new TestPagerAdapter(TestPagerMain.this);
         viewPager.setAdapter(adapter);
-
         time = (Chronometer) findViewById(R.id.time);
         time.start();
 

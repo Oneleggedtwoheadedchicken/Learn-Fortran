@@ -2,6 +2,7 @@ package com.oneleggedchicken.learnfortran;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -18,7 +19,7 @@ import java.util.ArrayList;
 
 public class TestPagerAdapter extends PagerAdapter {
 
-    int precentage=0;
+    int percentage=0;
     ArrayList<String> answer = new ArrayList<String>();
 
     Context context;
@@ -43,7 +44,7 @@ public class TestPagerAdapter extends PagerAdapter {
     @Override
     public int getCount() {
 
-        return 1;
+        return 2;
     }
 
     @Override
@@ -55,7 +56,7 @@ public class TestPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
 
-     if(position==1) {
+     if(position==0) {
          View itemView = inflater.inflate(R.layout.mcq_test, container,
                  false);
 
@@ -73,39 +74,39 @@ public class TestPagerAdapter extends PagerAdapter {
              public void onClick(View v) {
 
                  if (R1.isChecked()) {
-                     precentage += 10;
+                     percentage += 10;
                  } else {
                      answer.add("1)" + R1.getText().toString());
                  }
                  if (R2.isChecked()) {
-                     precentage += 10;
+                     percentage += 10;
                  } else {
                      answer.add("2)"+ R2.getText().toString());
                  }
                  if (R3.isChecked()) {
-                     precentage += 10;
+                     percentage += 10;
                  } else {
                      answer.add("3)"+ R3.getText().toString());
                  }
                  if (R4.isChecked()) {
-                     precentage += 10;
+                     percentage += 10;
                  } else {
                      answer.add("4)"+ R4.getText().toString());
                  }
                  if (R5.isChecked()) {
-                     precentage += 10;
+                     percentage += 10;
                  } else {
 
                      answer.add("5)"+ R5.getText().toString());
 
                  }
                  if (R6.isChecked()) {
-                     precentage += 10;
+                     percentage += 10;
                  } else {
                      answer.add(R6.getText().toString());
                  }
 
-                 Toast.makeText(context, "" + precentage, Toast.LENGTH_LONG).show();
+                 Toast.makeText(context, "" + percentage, Toast.LENGTH_LONG).show();
 
                  Pager();
 
@@ -141,37 +142,37 @@ public class TestPagerAdapter extends PagerAdapter {
                  A5 = E5.getText().toString().replace(" ","").toLowerCase();
 
                  if(A1.equals("54.0") || A1.equals("54.0")){
-                     precentage += 10;
+                     percentage += 10;
                  }else{
                      answer.add("6)"+" 54.0");
                  }
 
                  if(A2.equals("12.5")){
-                     precentage += 10;
+                     percentage += 10;
                  }else{
                      answer.add("7)"+"12.5");
 
                  }
 
                  if(A3.equals("78.0") || A1.equals("78.")){
-                     precentage += 10;
+                     percentage += 10;
                  }else{
                      answer.add("8)"+" 78.0");
                  }
 
                  if(A4.equals("9)"+" 3.5")){
-                     precentage += 10;
+                     percentage += 10;
                  }else{
                      answer.add("3.5");
                  }
 
                  if(A5.equals("error")){
-                     precentage += 10;
+                     percentage += 10;
                  }else{
                      answer.add("10)"+" Error because 144 should be REAL");
                  }
 
-                 Toast.makeText(context, "" + precentage, Toast.LENGTH_LONG).show();
+                 Toast.makeText(context, "" + percentage, Toast.LENGTH_LONG).show();
 
                  Pager();
 
@@ -201,12 +202,16 @@ public class TestPagerAdapter extends PagerAdapter {
     public void Pager(){
 
         if (TestPagerMain.viewPager.getCurrentItem() + 2 >getCount()) {
+            Intent intent = new Intent(context,Dialog.class);
+            intent.putExtra("time",TestPagerMain.time.getText().toString());
+            intent.putExtra("percentage", String.valueOf(percentage));
+            intent.putExtra("answer",(answer).toString().replaceAll("\\[|\\]", "").replaceAll(",", System.lineSeparator()));
+            context.startActivity(intent);
 
-            ((Activity) context).finish();
 
         } else {
 
-            TestPagerMain.viewPager.setCurrentItem(ViewPagerMain.viewPager.getCurrentItem() + 1, true);
+            TestPagerMain.viewPager.setCurrentItem(TestPagerMain.viewPager.getCurrentItem() + 1, true);
         }
 
     }
