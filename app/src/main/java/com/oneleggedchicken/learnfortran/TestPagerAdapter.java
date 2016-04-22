@@ -103,7 +103,7 @@ public class TestPagerAdapter extends PagerAdapter {
                  if (R6.isChecked()) {
                      percentage += (100/11);
                  } else {
-                     answer.add(R6.getText().toString());
+                     answer.add("6)"+ R6.getText().toString());
                  }
 
                  Pager();
@@ -142,23 +142,23 @@ public class TestPagerAdapter extends PagerAdapter {
                  if(A1.equals("54.0") || A1.equals("54.0")){
                      percentage += (100/11);
                  }else{
-                     answer.add("6)"+" 54.0");
+                     answer.add("7)"+" 54.0");
                  }
 
                  if(A2.equals("12.5")){
                      percentage += (100/11);
                  }else{
-                     answer.add("7)"+"12.5");
+                     answer.add("8)"+"12.5");
 
                  }
 
                  if(A3.equals("78.0") || A1.equals("78.")){
                      percentage += (100/11);
                  }else{
-                     answer.add("8)"+" 78.0");
+                     answer.add("9)"+" 78.0");
                  }
 
-                 if(A4.equals("9)"+" 3.5")){
+                 if(A4.equals("10)"+" 3.5")){
                      percentage += (100/11);
                  }else{
                      answer.add("3.5");
@@ -167,7 +167,7 @@ public class TestPagerAdapter extends PagerAdapter {
                  if(A5.equals("error")){
                      percentage += (100/11);
                  }else{
-                     answer.add("(100/11))"+" Error because 144 should be REAL");
+                     answer.add("11)"+" Error because 144 should be REAL");
                  }
 
                  Pager();
