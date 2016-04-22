@@ -74,34 +74,34 @@ public class TestPagerAdapter extends PagerAdapter {
              public void onClick(View v) {
 
                  if (R1.isChecked()) {
-                     percentage += 10;
+                     percentage += (100/11);
                  } else {
                      answer.add("1)" + R1.getText().toString());
                  }
                  if (R2.isChecked()) {
-                     percentage += 10;
+                     percentage += (100/11);
                  } else {
                      answer.add("2)"+ R2.getText().toString());
                  }
                  if (R3.isChecked()) {
-                     percentage += 10;
+                     percentage += (100/11);
                  } else {
                      answer.add("3)"+ R3.getText().toString());
                  }
                  if (R4.isChecked()) {
-                     percentage += 10;
+                     percentage += (100/11);
                  } else {
                      answer.add("4)"+ R4.getText().toString());
                  }
                  if (R5.isChecked()) {
-                     percentage += 10;
+                     percentage += (100/11);
                  } else {
 
                      answer.add("5)"+ R5.getText().toString());
 
                  }
                  if (R6.isChecked()) {
-                     percentage += 10;
+                     percentage += (100/11);
                  } else {
                      answer.add(R6.getText().toString());
                  }
@@ -140,34 +140,34 @@ public class TestPagerAdapter extends PagerAdapter {
                  A5 = E5.getText().toString().replace(" ","").toLowerCase();
 
                  if(A1.equals("54.0") || A1.equals("54.0")){
-                     percentage += 10;
+                     percentage += (100/11);
                  }else{
                      answer.add("6)"+" 54.0");
                  }
 
                  if(A2.equals("12.5")){
-                     percentage += 10;
+                     percentage += (100/11);
                  }else{
                      answer.add("7)"+"12.5");
 
                  }
 
                  if(A3.equals("78.0") || A1.equals("78.")){
-                     percentage += 10;
+                     percentage += (100/11);
                  }else{
                      answer.add("8)"+" 78.0");
                  }
 
                  if(A4.equals("9)"+" 3.5")){
-                     percentage += 10;
+                     percentage += (100/11);
                  }else{
                      answer.add("3.5");
                  }
 
                  if(A5.equals("error")){
-                     percentage += 10;
+                     percentage += (100/11);
                  }else{
-                     answer.add("10)"+" Error because 144 should be REAL");
+                     answer.add("(100/11))"+" Error because 144 should be REAL");
                  }
 
                  Pager();
