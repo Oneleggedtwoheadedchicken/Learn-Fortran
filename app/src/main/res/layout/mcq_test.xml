@@ -65,7 +65,6 @@
                     android:layout_height="wrap_content"
                     android:text="D. 64.0"
                     android:id="@+id/FORB1"
-                    android:padding="10dp"
                     android:layout_gravity="left" />
 
 
@@ -86,7 +85,9 @@
                 android:background="@drawable/mcq_shape"
                 android:layout_width="match_parent"
                 android:layout_margin="20dp"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
                 android:gravity="left"
                 android:orientation="vertical" >
 
@@ -137,7 +138,9 @@
                 android:background="@drawable/mcq_shape"
                 android:layout_width="match_parent"
                 android:layout_margin="20dp"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
                 android:gravity="center"
                 android:orientation="vertical" >
 
@@ -187,7 +190,9 @@
                 android:background="@drawable/mcq_shape"
                 android:layout_width="match_parent"
                 android:layout_margin="20dp"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
                 android:gravity="center"
                 android:orientation="vertical" >
 
@@ -237,7 +242,9 @@
                 android:background="@drawable/mcq_shape"
                 android:layout_width="match_parent"
                 android:layout_margin="20dp"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
                 android:gravity="center"
                 android:orientation="vertical" >
 
@@ -286,7 +293,9 @@
                 android:background="@drawable/mcq_shape"
                 android:layout_width="match_parent"
                 android:layout_margin="20dp"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
                 android:gravity="center"
                 android:orientation="vertical" >
 
