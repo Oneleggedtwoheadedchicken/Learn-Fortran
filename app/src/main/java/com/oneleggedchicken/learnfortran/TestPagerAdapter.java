@@ -106,8 +106,6 @@ public class TestPagerAdapter extends PagerAdapter {
                      answer.add(R6.getText().toString());
                  }
 
-                 Toast.makeText(context, "" + percentage, Toast.LENGTH_LONG).show();
-
                  Pager();
 
              }
@@ -171,8 +169,6 @@ public class TestPagerAdapter extends PagerAdapter {
                  }else{
                      answer.add("10)"+" Error because 144 should be REAL");
                  }
-
-                 Toast.makeText(context, "" + percentage, Toast.LENGTH_LONG).show();
 
                  Pager();
 
